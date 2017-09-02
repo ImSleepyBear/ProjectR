@@ -7,10 +7,15 @@ package projectrussian;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -19,17 +24,41 @@ import javafx.scene.control.Label;
 public class FXMLMainPage implements Initializable {
     
     @FXML
-    private Label label;
+    private ListView<String> mainPageListView;
     
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private final ChangeScene cs = new ChangeScene();
+    private final ListStorage listStorage = new ListStorage();
+    
+    public int selectedDestination;
+    public String destination;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ObservableList<String> mainMenuList = FXCollections.observableArrayList(listStorage.getMainMenuListview());
+        mainPageListView.setItems(mainMenuList);
+        
+        mainPageListView.setOnMouseClicked((MouseEvent event) -> {
+            System.out.println("Chosen listoption: " + mainPageListView.getSelectionModel().getSelectedItem());
+            selectedDestination = mainPageListView.getSelectionModel().getSelectedIndex();
+            System.out.println("selected destination: " + selectedDestination);
+            destination = listStorage.getSceneDestinations()[selectedDestination];
+            System.out.println("selected destination: " + destination);
+            cs.changeScene(event, destination);
+//            changeIt(event, destination, selectedDestination);
+        });
     }    
+
+    private void changeIt(MouseEvent event, String destination, int dest) {
+        
+        for (String sceneDestination : listStorage.getMainMenuListview()) {
+            if(sceneDestination.equals(destination)){
+                System.out.println("going to: " + sceneDestination);
+                System.out.println("going to: " + dest);
+                cs.changeScene(event, listStorage.getSceneDestinations()[dest]);
+            }
+        }
+        
+//        cs.changeScene(event, destination);
+    }
     
 }

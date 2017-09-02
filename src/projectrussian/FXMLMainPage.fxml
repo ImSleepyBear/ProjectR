@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLMainPage">
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLMainPage">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+      <SplitPane dividerPositions="0.18834080717488788" layoutX="209.0" layoutY="36.0" orientation="VERTICAL" prefHeight="432.0" prefWidth="642.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="415.0">
+               <children>
+                    <Label fx:id="label" layoutX="272.0" layoutY="31.0" minHeight="16" minWidth="69" text="Choose your action" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="205.0">
+               <children>
+                  <ListView fx:id="mainPageListView" layoutX="-5.0" layoutY="-7.0" prefHeight="356.0" prefWidth="645.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
     </children>
 </AnchorPane>
