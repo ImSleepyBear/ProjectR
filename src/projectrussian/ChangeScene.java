@@ -20,8 +20,8 @@ import javafx.stage.Stage;
  */
 public class ChangeScene {
     
-    public String mainPage = "MainPage";
-    public String russianAlphabet = "RussianAlphabet";
+//    public String mainPage = "MainPage";
+//    public String russianAlphabet = "RussianAlphabet";
     
     public void changeScene(ActionEvent event, String destination){
         try {

@@ -48,17 +48,17 @@ public class FXMLMainPage implements Initializable {
         });
     }    
 
-    private void changeIt(MouseEvent event, String destination, int dest) {
-        
-        for (String sceneDestination : listStorage.getMainMenuListview()) {
-            if(sceneDestination.equals(destination)){
-                System.out.println("going to: " + sceneDestination);
-                System.out.println("going to: " + dest);
-                cs.changeScene(event, listStorage.getSceneDestinations()[dest]);
-            }
-        }
+//    private void changeIt(MouseEvent event, String destination, int dest) {
+//        
+//        for (String sceneDestination : listStorage.getMainMenuListview()) {
+//            if(sceneDestination.equals(destination)){
+//                System.out.println("going to: " + sceneDestination);
+//                System.out.println("going to: " + dest);
+//                cs.changeScene(event, listStorage.getSceneDestinations()[dest]);
+//            }
+//        }
         
 //        cs.changeScene(event, destination);
-    }
+//    }
     
 }

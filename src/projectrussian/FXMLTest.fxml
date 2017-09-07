@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLTestController">
+   <children>
+      <TableView fx:id="tableView" layoutX="123.0" layoutY="74.0" prefHeight="252.0" prefWidth="354.0">
+        <columns>
+          <TableColumn fx:id="russian" prefWidth="177.0" text="Russian letters" />
+          <TableColumn fx:id="latin" prefWidth="176.0" text="Latin letters" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
