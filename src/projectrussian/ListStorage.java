@@ -30,7 +30,7 @@ public class ListStorage {
     };
     
     private String[] sceneDestinations = {
-        "RussianAlphabet", "Test", "MainPage"
+        "RussianAlphabet", "MainPage"
     };
     
 
