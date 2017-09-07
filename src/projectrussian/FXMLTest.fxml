@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,5 +13,6 @@
           <TableColumn fx:id="latin" prefWidth="176.0" text="Latin letters" />
         </columns>
       </TableView>
+      <Label layoutX="286.0" layoutY="23.0" text="Label" />
    </children>
 </AnchorPane>
