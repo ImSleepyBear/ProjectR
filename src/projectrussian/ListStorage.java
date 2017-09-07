@@ -18,7 +18,7 @@ public class ListStorage {
     };
     
     private String[] transcribedLetters = {
-        "a", "b", "v", "g", "d", "e (je)", "e", "zj", "z", "i", "j", "k", "l", "m", "n", "o (å)",
+        "a", "b", "v", "g", "d", "e (je)", "e (jo)", "zj", "z", "i", "j", "k", "l", "m", "n", "o (å)",
         "p", "r", "s", "t", "u (o)", "f", "ch", "ts (tze)", "tj (tje)", "sj (sja)", "sjtj", 
         "n/a (твёрдый знак, or hard sign)", "y", "n/a (мягкий знак, or soft sign)", "e (ä)", "ju", "ja"
     };
