@@ -40,7 +40,7 @@ public class FXMLMainPage implements Initializable {
 //            System.out.println("selected destination: " + selectedDestination);
 //            destination = listStorage.getSceneDestinations()[selectedDestination];
 //            System.out.println("selected destination: " + destination);
-//            cs.changeScene(event, destination);
+//            cs.changeScene(event, destination);e
             cs.changeScene(event, listStorage.getSceneDestinations()[mainPageListView.getSelectionModel().getSelectedIndex()]);
 //            changeIt(event, destination, selectedDestination);
         });

@@ -30,7 +30,7 @@ public class ListStorage {
     };
     
     private String[] sceneDestinations = {
-        "RussianAlphabet", "MainPage"
+        "RussianAlphabet", "Test", "MainPage"
     };
     
 
@@ -44,7 +44,7 @@ public class ListStorage {
     
     public String[] getRussianAndLatinLetters(){
         russianAndLatinLetters[0] = "Russian letters: Transcribed letters";
-        for(int i = 1; i < 34; i++){
+        for(int i = 0; i < 34; i++){
             russianAndLatinLetters[i] = getRussianLetters()[i-1] + ": " + getLatinLetters()[i-1];
             System.out.println(russianAndLatinLetters[i]);
         }

@@ -5,13 +5,13 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLMainPage">
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLMainPage">
     <children>
       <SplitPane dividerPositions="0.18834080717488788" layoutX="209.0" layoutY="36.0" orientation="VERTICAL" prefHeight="432.0" prefWidth="642.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="415.0">
                <children>
-                    <Label fx:id="label" layoutX="272.0" layoutY="31.0" minHeight="16" minWidth="69" text="Choose your action" />
+                    <Label fx:id="label" layoutX="272.0" layoutY="31.0" minHeight="16" minWidth="69" text="Main Menu" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="205.0">
