@@ -35,27 +35,28 @@ public class FXMLMainPage implements Initializable {
         mainPageListView.setItems(mainMenuList);
         
         mainPageListView.setOnMouseClicked((MouseEvent event) -> {
-            System.out.println("Chosen listoption: " + mainPageListView.getSelectionModel().getSelectedItem());
-            selectedDestination = mainPageListView.getSelectionModel().getSelectedIndex();
-            System.out.println("selected destination: " + selectedDestination);
-            destination = listStorage.getSceneDestinations()[selectedDestination];
-            System.out.println("selected destination: " + destination);
-            cs.changeScene(event, destination);
+//            System.out.println("Chosen listoption: " + mainPageListView.getSelectionModel().getSelectedItem());
+//            selectedDestination = mainPageListView.getSelectionModel().getSelectedIndex();
+//            System.out.println("selected destination: " + selectedDestination);
+//            destination = listStorage.getSceneDestinations()[selectedDestination];
+//            System.out.println("selected destination: " + destination);
+//            cs.changeScene(event, destination);e
+            cs.changeScene(event, listStorage.getSceneDestinations()[mainPageListView.getSelectionModel().getSelectedIndex()]);
 //            changeIt(event, destination, selectedDestination);
         });
     }    
 
-    private void changeIt(MouseEvent event, String destination, int dest) {
-        
-        for (String sceneDestination : listStorage.getMainMenuListview()) {
-            if(sceneDestination.equals(destination)){
-                System.out.println("going to: " + sceneDestination);
-                System.out.println("going to: " + dest);
-                cs.changeScene(event, listStorage.getSceneDestinations()[dest]);
-            }
-        }
+//    private void changeIt(MouseEvent event, String destination, int dest) {
+//        
+//        for (String sceneDestination : listStorage.getMainMenuListview()) {
+//            if(sceneDestination.equals(destination)){
+//                System.out.println("going to: " + sceneDestination);
+//                System.out.println("going to: " + dest);
+//                cs.changeScene(event, listStorage.getSceneDestinations()[dest]);
+//            }
+//        }
         
 //        cs.changeScene(event, destination);
-    }
+//    }
     
 }
