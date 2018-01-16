@@ -20,9 +20,13 @@ import javafx.stage.Stage;
  */
 public class ChangeScene {
     
-    public String mainPage = "MainPage";
-    public String russianAlphabet = "RussianAlphabet";
+//    public String mainPage = "MainPage";
+//    public String russianAlphabet = "AlphabetView";
     
+    
+    /*
+    used when buttons are pressed in any scene
+    */
     public void changeScene(ActionEvent event, String destination){
         try {
             Parent root = FXMLLoader.load(getClass().getResource("FXML" + destination + ".fxml"));
@@ -32,9 +36,14 @@ public class ChangeScene {
             appStage.show();
             System.out.println("Destination: " + destination);
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
     
+    /*
+    used in combo with items within menus and list where the items doesn't are
+    working as nodes
+    */
     public void changeScene(MouseEvent event, String destination) {        
         try {
             Parent root = FXMLLoader.load(getClass().getResource("FXML" + destination + ".fxml"));

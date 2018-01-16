@@ -14,7 +14,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -52,8 +51,8 @@ public class FXMLAlphabetView implements Initializable {
         bothAlfabets = getInitialTableData();
         tableView.setItems(bothAlfabets);
         
-        russian.setCellValueFactory(new PropertyValueFactory<Alfabets, String>("russian"));
-        latin.setCellValueFactory(new PropertyValueFactory<Alfabets, String>("latin"));
+        russian.setCellValueFactory(new PropertyValueFactory<>("russian"));
+        latin.setCellValueFactory(new PropertyValueFactory<>("latin"));
         
         tableView.getColumns().setAll(russian, latin);
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);

@@ -26,11 +26,11 @@ public class ListStorage {
     private String[] russianAndLatinLetters = new String[34];
     
     private String[] mainMenuListview = {
-        "Russian alphabet (Coming Soon)", "Practice on russian alphabet (Coming Soon)", "Russian Grammar (Coming Soon)"
+        "Russian alphabet", "Grammar - Part 1 (Coming Soon)", "Grammar - Part 2 (Coming Soon)", "Practice (Coming Soon)"
     };
     
     private String[] sceneDestinations = {
-        "RussianAlphabet", "Test", "MainPage"
+        "AlphabetView", "Test", "MainPage"
     };
     
 
