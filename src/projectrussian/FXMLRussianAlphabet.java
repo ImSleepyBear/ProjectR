@@ -29,7 +29,7 @@ public class FXMLRussianAlphabet implements Initializable {
     
     @FXML
     private void btnReturn(ActionEvent event){
-        cs.changeScene(event, listStorage.getSceneDestinations()[1]);
+        cs.changeScene(event, listStorage.getSceneDestinations()[2]);
     }
     
     @Override
