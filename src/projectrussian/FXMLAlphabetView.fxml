@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLRussianAlphabet">
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLAlphabetView">
    <children>
       <SplitPane dividerPositions="0.21559633027522937" layoutX="166.0" layoutY="68.0" orientation="VERTICAL" prefHeight="438.0" prefWidth="685.0">
         <items>
@@ -18,10 +18,10 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TableView fx:id="tableView" layoutX="1.0" layoutY="1.0" prefHeight="339.0" prefWidth="685.0">
+                  <TableView fx:id="tableView" prefHeight="339.0" prefWidth="683.0">
                     <columns>
-                      <TableColumn fx:id="russian" prefWidth="291.0" text="Russian Letters" />
-                      <TableColumn fx:id="latin" minWidth="0.0" prefWidth="393.0" text="Latin Letters" />
+                      <TableColumn fx:id="russian" prefWidth="278.0" text="Russian Letters" />
+                      <TableColumn fx:id="latin" minWidth="0.0" prefWidth="404.0" text="Latin Letters" />
                     </columns>
                   </TableView>
                </children>
