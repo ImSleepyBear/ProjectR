@@ -17,29 +17,38 @@ public class ListStorage {
         "Ч ч", "Ш ш", "Щ щ", "Ъ ъ", "Ы ы", "Ь ь", "Э э", "Ю ю", "Я я"
     };
     
-    private String[] transcribedLetters = {
+    private String[] latinLetters = {
         "a", "b", "v", "g", "d", "e (je)", "e (jo)", "zj", "z", "i", "j", "k", "l", "m", "n", "o (å)",
         "p", "r", "s", "t", "u (o)", "f", "ch", "ts (tze)", "tj (tje)", "sj (sja)", "sjtj", 
         "n/a (твёрдый знак, or hard sign)", "y", "n/a (мягкий знак, or soft sign)", "e (ä)", "ju", "ja"
     };
     
-    private String[] russianAndLatinLetters = new String[34];
+    private String[] russianAndLatinLetters = new String[33];
     
     private String[] mainMenuListview = {
-        "Russian alphabet", "Grammar (Coming Soon)", "Practice (Coming Soon)"
+        "Russian alphabet", "Grammar (Coming Soon)", "General Info (Coming Soon)", "Practice (Coming Soon)"
     };
     
     private String[] sceneDestinations = {
-        "AlphabetView", "Test", "MainPage"
+        "AlphabetView", "Grammar", "GeneralInfo", "Practice", "Settings", "MainPage"
     };
     
-
+    private String[] grammarListview = {
+        "Beginner - Alphabet rules", "Beginner - Russian Pronunciation", "Beginner - Russian Punctuation", 
+        "Beginner - Spelling Rules", "Beginner - Genders", "Beginner - Case", "Beginner - Genitive", 
+        "Beginner - Dative", "Beginner - Accusative", "Beginner - Instrumentalis", "Beginner - Locative", 
+        "Beginner - Personal Pronouns", "Beginner - Adjectives", "Beginner - Possessive Pronouns in Nominative", 
+        "Beginner - Verbs in Present Tense", "Beginner - Preteritum","Beginner - Verb Aspects", 
+        "Beginner - Imperative",  
+        "Intermediate", "Advanced", "Miscellaneus - Names"
+    };
+    
     public String[] getRussianLetters() {
         return russianLetters;
     }
 
     public String[] getLatinLetters() {
-        return transcribedLetters;
+        return latinLetters;
     }
     
     public String[] getRussianAndLatinLetters(){
@@ -57,6 +66,10 @@ public class ListStorage {
 
     public String[] getSceneDestinations() {
         return sceneDestinations;
+    }
+    
+    public String[] getGrammarListView(){
+        return grammarListview;
     }
     
 }

@@ -41,8 +41,8 @@ public class ChangeScene {
     }
     
     /*
-    used in combo with items within menus and list where the items doesn't are
-    working as nodes
+    used in combo with items within menus and lists where the items doesn't
+    work as nodes
     */
     public void changeScene(MouseEvent event, String destination) {        
         try {
