@@ -43,7 +43,7 @@ public class FXMLAlphabetView implements Initializable {
     
     @FXML
     private void btnReturn(ActionEvent event){
-        cs.changeScene(event, listStorage.getSceneDestinations()[listStorage.getMainMenuListview().length]);
+        cs.changeScene(event, listStorage.getSceneDestinations()[listStorage.getSceneDestinations().length-1]);
     }
     
     @Override

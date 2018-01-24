@@ -18,19 +18,21 @@ public class ListStorage {
     };
     
     private String[] latinLetters = {
-        "a", "b", "v", "g", "d", "e (je)", "e (jo)", "zj", "z", "i", "j", "k", "l", "m", "n", "o (å)",
-        "p", "r", "s", "t", "u (o)", "f", "ch", "ts (tze)", "tj (tje)", "sj (sja)", "sjtj", 
-        "n/a (твёрдый знак, or hard sign)", "y", "n/a (мягкий знак, or soft sign)", "e (ä)", "ju", "ja"
+        "a", "b", "v", "g", "d", "e (stressed: je, unstressed: ji)", "e (jå, always stressed)", 
+        "zj", "z", "i", "j", "k", "l", "m", "n", "o (stressed: å, unstressed: a)",
+        "p", "r (rolling)", "s", "t", "u (o)", "f", "ch", "ts (tze)", "tj (tje)", 
+        "sj (sja)", "sjtj", "n/a (твёрдый знак, or hard sign)", "i (back of the mouth i)", 
+        "n/a (мягкий знак, or soft sign)", "e (ä)", "jo", "ja"
     };
     
     private String[] russianAndLatinLetters = new String[33];
     
     private String[] mainMenuListview = {
-        "Russian alphabet", "Grammar (Coming Soon)", "General Info (Coming Soon)", "Practice (Coming Soon)"
+        "Russian alphabet", "Grammar (Coming Soon)", "Practice (Coming Soon)", "General Info (Coming Soon)", "Settings (Coming Soon)"
     };
     
     private String[] sceneDestinations = {
-        "AlphabetView", "Grammar", "GeneralInfo", "Practice", "Settings", "MainPage"
+        "AlphabetView", "Grammar", "Practice", "GeneralInfo", "Settings", "MainPage"
     };
     
     private String[] grammarListview = {
