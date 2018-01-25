@@ -1,25 +1,21 @@
-package projectrussian;
 
+package projectrussian;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-
-/*
- * Used as an extenstion to help populate tableviews with items in the columns
- */
 
 /**
  *
  * @author Mohini
  */
-public class Alfabets {
+public class TableviewHelperAlphabet {
     
     private SimpleStringProperty russianLetter;
     private SimpleStringProperty latinLetter;
     
     private final ListStorage listStorage = new ListStorage();
     
-    public Alfabets(String russian, String latin){
+    public TableviewHelperAlphabet(String russian, String latin){
         russianLetter = new SimpleStringProperty(russian);
         latinLetter = new SimpleStringProperty(latin);
     }

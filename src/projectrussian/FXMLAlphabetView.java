@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package projectrussian;
 
 import java.net.URL;
@@ -19,7 +15,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
- * FXML Controller class
  *
  * @author mohini
  */
@@ -29,9 +24,9 @@ public class FXMLAlphabetView implements Initializable {
     private final ChangeScene cs = new ChangeScene();
     
     @FXML
-    private TableView<Alfabets> tableView;
+    private TableView<TableviewHelperAlphabet> tableView;
     
-    private ObservableList<Alfabets> bothAlfabets;
+    private ObservableList<TableviewHelperAlphabet> bothAlfabets;
     
     @FXML
     private TableColumn russian;
@@ -39,7 +34,7 @@ public class FXMLAlphabetView implements Initializable {
     @FXML
     private TableColumn latin;
     
-    private Alfabets alfabets;
+    private TableviewHelperAlphabet alfabets;
     
     @FXML
     private void btnReturn(ActionEvent event){
@@ -58,15 +53,15 @@ public class FXMLAlphabetView implements Initializable {
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }    
     
-    private ObservableList<Alfabets> getInitialTableData() {
+    private ObservableList<TableviewHelperAlphabet> getInitialTableData() {
         
-        List<Alfabets> list = new ArrayList<>();
+        List<TableviewHelperAlphabet> list = new ArrayList<>();
         
         for(int i = 0; i < listStorage.getLatinLetters().length; i++){
-            list.add(new Alfabets(listStorage.getRussianLetters()[i], listStorage.getLatinLetters()[i]));
+            list.add(new TableviewHelperAlphabet(listStorage.getRussianLetters()[i], listStorage.getLatinLetters()[i]));
         }
         
-        ObservableList<Alfabets> data = FXCollections.observableList(list);
+        ObservableList<TableviewHelperAlphabet> data = FXCollections.observableList(list);
         
         return data;
     }
