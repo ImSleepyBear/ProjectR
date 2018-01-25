@@ -38,7 +38,11 @@ public class ListStorage {
         "Beginner - Personal Pronouns", "Beginner - Adjectives", "Beginner - Possessive Pronouns in Nominative", 
         "Beginner - Verbs in Present Tense", "Beginner - Preteritum","Beginner - Verb Aspects", 
         "Beginner - Imperative",  
-        "Intermediate", "Advanced", "Miscellaneus - Names"
+        "Intermediate", "Advanced"
+    };
+    
+    private String[] generalInfoListview = {
+        "Alphabet - Old and Updated Letters", "Miscellaneus - Names"
     };
     
     public String[] getRussianLetters() {
@@ -68,6 +72,10 @@ public class ListStorage {
     
     public String[] getGrammarListView(){
         return grammarListview;
+    }
+    
+    public String[] getGeneralInfoListview(){
+        return generalInfoListview;
     }
     
 }
