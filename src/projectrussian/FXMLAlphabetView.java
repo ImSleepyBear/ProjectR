@@ -22,6 +22,7 @@ public class FXMLAlphabetView implements Initializable {
 
     private final ListStorage listStorage = new ListStorage();
     private final ChangeScene cs = new ChangeScene();
+    private final AudioHandler ah = new AudioHandler();
     
     @FXML
     private TableView<TableviewHelperAlphabet> tableView;
