@@ -38,8 +38,9 @@ public class ListStorage {
         "Beginner - Verbs in Present Tense", "Beginner - Preteritum", "Beginner - Verb Aspects",
         "Beginner - Imperative",
         "Beginner",
-        "Intermediate - Verbs in Past Tense",
+        "Intermediate - Verbs in Past Tense", "Intermediate - Verbs in Futurum",
         "Intermediate",
+        "Advanced - Verbs in Past Futurum", 
         "Advanced"
     };
 

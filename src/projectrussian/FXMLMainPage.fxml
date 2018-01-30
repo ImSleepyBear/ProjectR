@@ -2,24 +2,16 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLMainPage">
     <children>
-      <SplitPane dividerPositions="0.18834080717488788" layoutX="208.0" layoutY="47.0" orientation="VERTICAL" prefHeight="432.0" prefWidth="642.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="415.0">
-               <children>
-                    <Label fx:id="label" layoutX="289.0" layoutY="31.0" minHeight="16" minWidth="63.0" prefHeight="17.0" prefWidth="63.0" text="Main Menu" />
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="205.0">
-               <children>
-                  <ListView fx:id="mainPageListView" layoutX="-5.0" layoutY="-7.0" prefHeight="356.0" prefWidth="645.0" />
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
+      <Pane layoutX="146.0" layoutY="29.0" prefHeight="416.0" prefWidth="733.0">
+         <children>
+              <Label fx:id="label" layoutX="335.0" layoutY="14.0" minHeight="16" minWidth="63.0" prefHeight="17.0" prefWidth="63.0" text="Main Menu" />
+            <ListView fx:id="mainPageListView" layoutY="42.0" prefHeight="374.0" prefWidth="733.0" />
+         </children>
+      </Pane>
     </children>
 </AnchorPane>
