@@ -6,13 +6,13 @@ package projectrussian;
  */
 public class ListStorage {
 
-    private String[] russianLetters = {
+    public String[] russianLetters = {
         "А а", "Б б", "В в", "Г г", "Д д", "Е е", "Ё ё", "Ж ж", "З з", "И и", "Й й", "К к",
         "Л л", "М м", "Н н", "О о", "П п", "Р р", "С с", "Т т", "У у", "Ф ф", "Х х", "Ц ц",
         "Ч ч", "Ш ш", "Щ щ", "Ъ ъ", "Ы ы", "Ь ь", "Э э", "Ю ю", "Я я"
     };
 
-    private String[] latinLetters = {
+    public String[] latinLetters = {
         "a", "b", "v", "g", "d", "e (stressed: je, unstressed: ji)", "e (jå, always stressed)",
         "zj", "z", "i", "j", "k", "l", "m", "n", "o (stressed: å, unstressed: a)",
         "p", "r (rolling)", "s", "t", "u (o)", "f", "ch", "ts (tze)", "tj (tje)",
@@ -20,24 +20,24 @@ public class ListStorage {
         "n/a (мягкий знак, or soft sign)", "e (ä)", "jo", "ja"
     };
     
-    private String[] russianPronunciation = {
+    public String[] russianPronunciation = {
         
     };
 
-    private String[] russianAndLatinLetters = new String[33];
+    public String[] russianAndLatinLetters = new String[33];
 
-    private String[] mainMenuListview = {
+    public String[] mainMenuListview = {
         "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Info (Coming Soon)", "Settings (Coming Soon)"
     };
 
-    private String[] sceneDestinations = {
+    public String[] sceneDestinations = {
         "AlphabetView", "Grammar", "Practice", "GeneralInfo", "Settings", "MainPage"
     };
 
-    private String[] grammarListview = {
+    public String[] grammarListview = {
         "Beginner - Gender Endings", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case", 
         "Beginner - Accusative Case", "Beginner - Nominative Case", "Beginner - Instrumentalis Case", 
-        "Beginner - Locative Case", "Beginner - Substantives", "Beginner - Adjectives", 
+        "Beginner - Locative Case", "Beginner - Substantives/Nouns", "Beginner - Adjectives", 
         "Beginner - Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
         "Beginner - Verbs", "Beginner - Preteritum", "Beginner - Verb Aspects", "Beginner - Imperative",
         "Beginner",
@@ -47,98 +47,79 @@ public class ListStorage {
         "Advanced"
     };
 
-    private String[] generalInfoListview = {
+    public String[] generalInfoListview = {
         "Alphabet/Spelling Rules", "Russian Pronunciation", "Russian Punctuation",
         "Old and Updated Alphabet Letters", "Miscellaneus - Names"
     };
 
-    private String[] spellingRules = {
+    public String[] spellingRules = {
         "Unstressed O can't follow ж, ц, ч, ш, and щ; and instead uses the letter Е",
         "Я is written as A, and Ю is written as У, after the letters Г, К, Ж, Х, Ш, and Щ",
-        "Ы is written as И after Г, К, Ж, Х, Ш, and Щ"
+        "Ы is written as И after Г, К, Ж, Х, Ш, and Щ",
+        "The letter Ы, and the signs Ь and Ъ, aren't used in the beginning of words. The letter Й is only used with a vowel",
+        "Stressing accents and the dots over Ё aren't used in ordinary russian texts"
     };
 
-    private String[] audioFileNames = { // should contain the names of the audio files that comes with the application
+    public String[] audioFileNames = { // should contain the names of the audio files that comes with the application
     };
 
-    private String[] imageFileNames = { // should contain the names of the image files available for the application
+    public String[] imageFileNames = { // should contain the names of the image files available for the application
     };
 
-    private String[] weekdaysLatin = {
+    public String[] weekdaysLatin = {
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    };
+    
+    public String[] weekdaysRussian = {
+        "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"
+    };
+    
+    public String[] monthsLatin = {
+        "January", "February", "March", "April", "May", "June", "July", "August",
+        "September", "October", "November", "December"
+    };
+    
+    public String[] monthsRussian = {
+        "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", " Август",
+        "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    };
+    
+    public String[] substantives = {
         
     };
     
-    private String[] weekdaysRussian = {
+    public String[] adjectives = {
         
     };
     
-    private String[] monthsLatin = {
+    public String[] verbs = {
         
     };
     
-    private String[] monthsRussian = {
-        
+    public String[] grammaticalTerms = {
+        "Accusative", "Adverbs", "Case", "Dative", "Gender", "Genitive", "Imperative", "Imperfect",
+        "Instrumental", "Locative", "Nominative", "Perfect", "Pronouns", "Substantives", "Verbs"
     };
     
-    public String[] getRussianLetters() {
-        return russianLetters;
-    }
-
-    public String[] getLatinLetters() {
-        return latinLetters;
-    }
-
-    public String[] getRussianPronunciation() {
-        return russianPronunciation;
-    }
+    public String[] grammarTermsTableview = {
+        "Nominative", "Genitive", "Dative", "Accusative", "Imperative", "Locative"
+    };
+    
+    public String[] basicCase = {
+        "Feminine", "Masculine", "Neuter"
+    };
+    
+    public String[] singularPlural = {
+        "Singular", "Plural"
+    };
 
     public String[] getRussianAndLatinLetters() {
         russianAndLatinLetters[0] = "Russian letters: Transcribed letters";
         for (int i = 0; i < 34; i++) {
-            russianAndLatinLetters[i] = getRussianLetters()[i - 1] + ": " + getLatinLetters()[i - 1];
+            russianAndLatinLetters[i] = russianLetters[i - 1] + ": " + latinLetters[i - 1];
             System.out.println(russianAndLatinLetters[i]);
         }
         return russianAndLatinLetters;
     }
-
-    public String[] getMainMenuListview() {
-        return mainMenuListview;
-    }
-
-    public String[] getSceneDestinations() {
-        return sceneDestinations;
-    }
-
-    public String[] getGrammarListView() {
-        return grammarListview;
-    }
-
-    public String[] getGeneralInfoListview() {
-        return generalInfoListview;
-    }
-
-    public String[] getSpellingRules() {
-        return spellingRules;
-    }
-
-    public String[] getAudioFileNames() {
-        return audioFileNames;
-    }
-
-    public String[] getWeekdaysLatin() {
-        return weekdaysLatin;
-    }
-
-    public String[] getWeekdaysRussian() {
-        return weekdaysRussian;
-    }
-
-    public String[] getMonthsLatin() {
-        return monthsLatin;
-    }
-
-    public String[] getMonthsRussian() {
-        return monthsRussian;
-    }
-
+    
 }

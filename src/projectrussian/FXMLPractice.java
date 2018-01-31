@@ -18,7 +18,7 @@ public class FXMLPractice implements Initializable {
     
     @FXML
     private void btnReturn(ActionEvent event){
-        cs.changeScene(event, listStorage.getSceneDestinations()[listStorage.getSceneDestinations().length-1]);
+        cs.changeScene(event, listStorage.sceneDestinations[listStorage.sceneDestinations.length-1]);
     }
     
     @Override

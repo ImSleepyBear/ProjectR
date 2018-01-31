@@ -27,12 +27,12 @@ public class FXMLMainPage implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        ObservableList<String> mainMenuList = FXCollections.observableArrayList(listStorage.getMainMenuListview());
+        ObservableList<String> mainMenuList = FXCollections.observableArrayList(listStorage.mainMenuListview);
         mainPageListView.setItems(mainMenuList);
         
         mainPageListView.setOnMouseClicked((MouseEvent event) -> {
             System.out.println(mainPageListView.getSelectionModel().getSelectedIndex());
-            cs.changeScene(event, listStorage.getSceneDestinations()[mainPageListView.getSelectionModel().getSelectedIndex()]);
+            cs.changeScene(event, listStorage.sceneDestinations[mainPageListView.getSelectionModel().getSelectedIndex()]);
         });
     }        
 }

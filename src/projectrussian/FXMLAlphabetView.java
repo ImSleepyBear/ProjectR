@@ -35,11 +35,14 @@ public class FXMLAlphabetView implements Initializable {
     @FXML
     private TableColumn latin;
     
+    @FXML
+    private TableColumn pronunciation;
+    
     private TableviewHelperAlphabet alfabets;
     
     @FXML
     private void btnReturn(ActionEvent event){
-        cs.changeScene(event, listStorage.getSceneDestinations()[listStorage.getSceneDestinations().length-1]);
+        cs.changeScene(event, listStorage.sceneDestinations[listStorage.sceneDestinations.length-1]);
     }
     
     @Override
@@ -48,9 +51,10 @@ public class FXMLAlphabetView implements Initializable {
         tableView.setItems(bothAlfabets);
         
         russian.setCellValueFactory(new PropertyValueFactory<>("russian"));
+        pronunciation.setCellValueFactory(new PropertyValueFactory<>("pronunciation"));
         latin.setCellValueFactory(new PropertyValueFactory<>("latin"));
         
-        tableView.getColumns().setAll(russian, latin);
+        tableView.getColumns().setAll(russian, pronunciation, latin);
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }    
     
@@ -58,8 +62,8 @@ public class FXMLAlphabetView implements Initializable {
         
         List<TableviewHelperAlphabet> list = new ArrayList<>();
         
-        for(int i = 0; i < listStorage.getLatinLetters().length; i++){
-            list.add(new TableviewHelperAlphabet(listStorage.getRussianLetters()[i], listStorage.getLatinLetters()[i]));
+        for(int i = 0; i < listStorage.latinLetters.length; i++){
+            list.add(new TableviewHelperAlphabet(listStorage.russianLetters[i], listStorage.latinLetters[i], listStorage.latinLetters[i]));
         }
         
         ObservableList<TableviewHelperAlphabet> data = FXCollections.observableList(list);

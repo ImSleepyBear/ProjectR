@@ -11,13 +11,15 @@ import javafx.beans.property.StringProperty;
 public class TableviewHelperAlphabet {
     
     private SimpleStringProperty russianLetter;
+    private SimpleStringProperty pronunciation;
     private SimpleStringProperty latinLetter;
     
     private final ListStorage listStorage = new ListStorage();
     
-    public TableviewHelperAlphabet(String russian, String latin){
-        russianLetter = new SimpleStringProperty(russian);
-        latinLetter = new SimpleStringProperty(latin);
+    public TableviewHelperAlphabet(String russian, String pronunciation, String latin){
+        this.russianLetter = new SimpleStringProperty(russian);
+        this.pronunciation = new SimpleStringProperty(pronunciation);
+        this.latinLetter = new SimpleStringProperty(latin);
     }
 
     public String getRussian() {
@@ -30,6 +32,18 @@ public class TableviewHelperAlphabet {
 
     private StringProperty russianProperty(){
         return russianLetter;
+    }
+    
+    public String getPronunciation(){
+        return pronunciation.get();
+    }
+    
+    public void setPronunciation(String word){
+        pronunciation.set(word);
+    }
+    
+    private StringProperty pronounciationProperty(){
+        return pronunciation;
     }
     
     public String getLatin() {

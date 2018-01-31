@@ -25,14 +25,14 @@ public class FXMLGrammar implements Initializable {
     
     @FXML
     private void btnReturn(ActionEvent event){
-        cs.changeScene(event, listStorage.getSceneDestinations()[listStorage.getSceneDestinations().length-1]);
+        cs.changeScene(event, listStorage.sceneDestinations[listStorage.sceneDestinations.length-1]);
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
         ObservableList<String> obsList = FXCollections.observableArrayList();
-        obsList.addAll(Arrays.asList(listStorage.getGrammarListView()));
+        obsList.addAll(Arrays.asList(listStorage.grammarListview));
         
         grammarTopics.setItems(obsList);
     }
