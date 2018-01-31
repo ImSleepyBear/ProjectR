@@ -31,12 +31,11 @@ public class ListStorage {
     };
 
     private String[] grammarListview = {
-        "Beginner - Alphabet/Spelling Rules", "Beginner - Russian Pronunciation", "Beginner - Russian Punctuation",
-        "Beginner - Genders", "Beginner - Case", "Beginner - Genitive", "Beginner - Dative", "Beginner - Accusative",
-        "Beginner - Instrumentalis", "Beginner - Locative", "Beginner - Substantives", "Beginner - Adjectives",
-        "Beginner - Possessive Pronouns in Nominative", "Beginner - Personal Pronouns", "Beginner - Numerals",
-        "Beginner - Verbs in Present Tense", "Beginner - Preteritum", "Beginner - Verb Aspects",
-        "Beginner - Imperative",
+        "Beginner - Gender Endings", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case", 
+        "Beginner - Accusative Case", "Beginner - Nominative Case", "Beginner - Instrumentalis Case", 
+        "Beginner - Locative Case", "Beginner - Substantives", "Beginner - Adjectives", 
+        "Beginner - Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
+        "Beginner - Verbs", "Beginner - Preteritum", "Beginner - Verb Aspects", "Beginner - Imperative",
         "Beginner",
         "Intermediate - Verbs in Past Tense",
         "Intermediate",
@@ -44,7 +43,8 @@ public class ListStorage {
     };
 
     private String[] generalInfoListview = {
-        "Alphabet - Old and Updated Letters", "Miscellaneus - Names"
+        "Alphabet/Spelling Rules", "Russian Pronunciation", "Russian Punctuation",
+        "Old and Updated Alphabet Letters", "Miscellaneus - Names"
     };
 
     private String[] spellingRules = {
