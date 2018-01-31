@@ -19,6 +19,10 @@ public class ListStorage {
         "sj (sja)", "sjtj", "n/a (твёрдый знак, or hard sign)", "i (back of the mouth i)",
         "n/a (мягкий знак, or soft sign)", "e (ä)", "jo", "ja"
     };
+    
+    private String[] russianPronunciation = {
+        
+    };
 
     private String[] russianAndLatinLetters = new String[33];
 
@@ -33,12 +37,12 @@ public class ListStorage {
     private String[] grammarListview = {
         "Beginner - Alphabet/Spelling Rules", "Beginner - Russian Pronunciation", "Beginner - Russian Punctuation",
         "Beginner - Genders", "Beginner - Case", "Beginner - Genitive", "Beginner - Dative", "Beginner - Accusative",
-        "Beginner - Instrumentalis", "Beginner - Locative", "Beginner - Substantives", "Beginner - Adjectives",
+        "Beginner - Instrumentalis", "Beginner - Locative", "Beginner - Substantives/Nouns", "Beginner - Adjectives",
         "Beginner - Possessive Pronouns in Nominative", "Beginner - Personal Pronouns", "Beginner - Numerals",
         "Beginner - Verbs in Present Tense", "Beginner - Preteritum", "Beginner - Verb Aspects",
         "Beginner - Imperative",
         "Beginner",
-        "Intermediate - Verbs in Past Tense", "Intermediate - Verbs in Futurum",
+        "Intermediate - Verbs in Past Tense",
         "Intermediate",
         "Advanced - Verbs in Past Futurum", 
         "Advanced"
@@ -60,12 +64,32 @@ public class ListStorage {
     private String[] imageFileNames = { // should contain the names of the image files available for the application
     };
 
+    private String[] weekdaysLatin = {
+        
+    };
+    
+    private String[] weekdaysRussian = {
+        
+    };
+    
+    private String[] monthsLatin = {
+        
+    };
+    
+    private String[] monthsRussian = {
+        
+    };
+    
     public String[] getRussianLetters() {
         return russianLetters;
     }
 
     public String[] getLatinLetters() {
         return latinLetters;
+    }
+
+    public String[] getRussianPronunciation() {
+        return russianPronunciation;
     }
 
     public String[] getRussianAndLatinLetters() {
@@ -99,6 +123,22 @@ public class ListStorage {
 
     public String[] getAudioFileNames() {
         return audioFileNames;
+    }
+
+    public String[] getWeekdaysLatin() {
+        return weekdaysLatin;
+    }
+
+    public String[] getWeekdaysRussian() {
+        return weekdaysRussian;
+    }
+
+    public String[] getMonthsLatin() {
+        return monthsLatin;
+    }
+
+    public String[] getMonthsRussian() {
+        return monthsRussian;
     }
 
 }
