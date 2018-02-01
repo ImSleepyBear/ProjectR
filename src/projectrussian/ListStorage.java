@@ -67,7 +67,7 @@ public class ListStorage {
         "Stressing accents and the dots over Ё aren't used in ordinary russian texts"
     };
 
-    public String[] weekdaysLatin = {
+    public String[] weekdaysEnglish = {
         "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
     };
 
@@ -75,7 +75,7 @@ public class ListStorage {
         "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"
     };
 
-    public String[] monthsLatin = {
+    public String[] monthsEnglish = {
         "January", "February", "March", "April", "May", "June", "July", "August",
         "September", "October", "November", "December"
     };
