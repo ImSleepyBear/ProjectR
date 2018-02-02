@@ -6,6 +6,14 @@ package projectrussian;
  */
 public class ListStorage {
 
+    public String[] mainMenuListview = {
+        "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Info (Coming Soon)", "Settings (Coming Soon)"
+    };
+
+    public String[] sceneDestinations = {
+        "AlphabetView", "Grammar", "Practice", "GeneralInfo", "Settings", "MainPage"
+    };
+
     public String[] russianLetters = {
         "А а", "Б б", "В в", "Г г", "Д д", "Е е", "Ё ё", "Ж ж", "З з", "И и", "Й й", "К к",
         "Л л", "М м", "Н н", "О о", "П п", "Р р", "С с", "Т т", "У у", "Ф ф", "Х х", "Ц ц",
@@ -32,14 +40,6 @@ public class ListStorage {
         "Consonant", "Consonant", "Consonant", "Consonant", "Vowel", "Consonant", "Vowel", "Vowel", "Vowel"
     };
 
-    public String[] mainMenuListview = {
-        "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Info (Coming Soon)", "Settings (Coming Soon)"
-    };
-
-    public String[] sceneDestinations = {
-        "AlphabetView", "Grammar", "Practice", "GeneralInfo", "Settings", "MainPage"
-    };
-
     public String[] grammarListview = {
         "Beginner - Gender Endings", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case",
         "Beginner - Accusative Case", "Beginner - Nominative Case", "Beginner - Instrumentalis Case",
@@ -55,7 +55,7 @@ public class ListStorage {
 
     public String[] generalInfoListview = {
         "Alphabet/Spelling Rules", "Russian Pronunciation", "Russian Punctuation",
-        "Old and Updated Alphabet Letters", "Miscellaneus - Names", 
+        "Old and Updated Alphabet Letters", "Miscellaneus - Names",
         "Miscellaneous - Weekdays", "Miscellaneous - Months"
     };
 
@@ -67,25 +67,75 @@ public class ListStorage {
         "Stressing accents and the dots over Ё aren't used in ordinary russian texts"
     };
 
-    public String[] weekdaysEnglish = {
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    public String[][] weekdays = {
+        {"English", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"},
+        {"Russian", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"}
     };
 
-    public String[] weekdaysRussian = {
-        "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"
+    public String[][] monthsEnglish = {
+        {"English", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"},
+        {"Russian", "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", " Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"}
     };
 
-    public String[] monthsEnglish = {
-        "January", "February", "March", "April", "May", "June", "July", "August",
-        "September", "October", "November", "December"
+    public String[][] substantivesFeminineSingular = {
+        {"-О", "-Е", "-ИЕ", "-МЯ"},
+        {"-О", "-Е", "-ИЕ", "-МЯ"},
+        {"-А", "-Я", "-ИЯ", "-МЕНИ"},
+        {"-У", "-Ю", "-ИЮ", "-МЕНИ"},
+        {"-О", "-Е", "-ИЕ", "-МЯ"},
+        {"-ОМ", "-ЕМ", "-ИЕМ", "-МЕНЕМ"},
+        {"-Е", "-Е", "-ИИ", "-МЕНИ"},
     };
-
-    public String[] monthsRussian = {
-        "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", " Август",
-        "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    
+    public String[][] substantivesFemininePlural = {
+        {"-О", "-Е", "-ИЕ", "-МЯ"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
     };
-
-    public String[] substantives = {};
+    
+    public String[][] substantivesMasculineSingular = {
+        {"hard", "-Ь", "-Ж, -Ч, -Ш, -Щ", "-АЙ"},
+        {"N/A", "-Ь", "-", "-АЙ"},
+        {"-А", "N/A", "-А", "-АЯ"},
+        {"-У", "-Ю", "-У", "-АЮ"},
+        {"N/A", "-Я", "-", "-АЙ"},
+        {"-ОМ", "-ЕМ", "-ОМ", "-АЕМ"},
+        {"-Е", "-Е", "-Е", "-АЕ"}
+    };
+    
+    public String[][] substantivesMasculinePlural = {
+        {"hard", "-Ь", "-Ж, -Ч, -Ш, -Щ", "-АЙ"},
+        {"-Ы", "-И", "-И", "-Й"},
+        {"-ОВ", "-ЕЙ", "-ЕЙ", "-ЕВ"},
+        {"-АМ", "-ЯМ", "-АМ", "-ЯМ"},
+        {"-Ы", "-ЕЙ", "-И", "-И"},
+        {"-АМИ", "-ЯМИ", "-АМИ", "-ЯМИ"},
+        {"-АХ", "-ЯХ", "-АХ", "-ЯХ"}
+    };
+    
+    public String[][] substantivesNeuterSingular = {
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+    };
+    
+    public String[][] substantivesNeuterPlural = {
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+        {"-", "-", "-", "-"},
+    };
 
     public String[] adjectives = {};
 
@@ -96,19 +146,30 @@ public class ListStorage {
         "Instrumental", "Locative", "Nominative", "Perfect", "Pronouns", "Substantives", "Verbs"
     };
 
-    public String[] grammarTermsTableview = {
+    public String[] grammarTermsForTableview = {
         "Nominative", "Genitive", "Dative", "Accusative", "Imperative", "Locative"
     };
 
-    public String[] genders = {
+    public String[] genders = { //keep this variable for labels, or dispose of it if not used?
         "Feminine", "Masculine", "Neuter"
     };
 
     public String[] genderRules = {};
 
-    public String[] singularPlural = {
+    public String[] singularPlural = { //keep this variable, or dispose of it?
         "Singular", "Plural"
     };
+
+    public String[][] personalPronouns = {
+        {"Я", "ТЫ", "ОН", "ОНА", "МЫ", "ВЫ", "ОН"},
+        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "НАС", "ВАС", "ИХ"},
+        {"МНЕ", "ТЕБЕ", "ЕМУ", "ЕЙ", "НАМ", "ВАМ", "ИМ"},
+        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "НАС", "ВАС", "ИХ"},
+        {"МНОЙ", "ТОБОЙ", "ИМ", "ЕЙ", "НАМИ", "ВАМИ", "ИМИ"},
+        {"МНЕ", "ТЕБЕ", "НЁМ", "НЕЙ", "НАС", "ВАС", "НИХ"}
+    };
+
+    public String[][] possessivePronouns = {};
 
     public String[] audioFileNames = { // should contain the names of the audio files that comes with the application
     };
