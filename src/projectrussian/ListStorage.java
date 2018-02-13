@@ -44,7 +44,7 @@ public class ListStorage {
         "Beginner - Gender Endings", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case",
         "Beginner - Accusative Case", "Beginner - Nominative Case", "Beginner - Instrumentalis Case",
         "Beginner - Locative Case", "Beginner - Substantives/Nouns", "Beginner - Adjectives",
-        "Beginner - Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
+        "Beginner - Basic Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
         "Beginner - Verbs", "Beginner - Preteritum", "Beginner - Verb Aspects", "Beginner - Imperative",
         "Beginner",
         "Intermediate - Verbs in Past Tense",
