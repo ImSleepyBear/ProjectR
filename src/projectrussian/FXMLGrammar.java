@@ -74,7 +74,7 @@ public class FXMLGrammar implements Initializable {
     }
     
     @FXML
-    private void tableVisibility(){
+    private void visibility(){
         visibility = !visibility;
         tableView.setVisible(visibility);
         menuButtonGender.setVisible(visibility);
@@ -89,6 +89,21 @@ public class FXMLGrammar implements Initializable {
         
         grammarTopics.setItems(obsList);
 
+        /*
+        Depending on which item that is clicked on in the listview with grammar options,
+        the layout will always display text in a textflow, one or both menubuttons, 
+        a tableview, or all previously mentioned options.
+        
+        The text should always be visible, but display different text depending on chosen listview item.
+        From there, the menubuttons and the tableview will programmatically vary in size and location.
+        The tableview should have a basic amount of tablecolumns, that further on are programmatically 
+        selected to be displayed and modified depending on selected listview item. Extra classes are
+        needed to display the items in the tableview columns.
+        
+        Variables are needed to keep track of which listview item that is selected, and what
+        related info that should be displayed.
+        */
+        
         tableView.setVisible(visibility);
         menuButtonGender.setVisible(visibility);
         menuButtonMultiples.setVisible(visibility);

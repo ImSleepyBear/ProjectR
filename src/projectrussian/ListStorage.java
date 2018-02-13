@@ -50,7 +50,8 @@ public class ListStorage {
         "Intermediate - Verbs in Past Tense",
         "Intermediate",
         "Advanced - Verbs in Past Futurum",
-        "Advanced"
+        "Advanced",
+        "Demonstrative Pronouns", "Determinative Pronouns", "Interrogative Pronouns"
     };
 
     public String[] generalInfoListview = {
@@ -161,15 +162,48 @@ public class ListStorage {
     };
 
     public String[][] personalPronouns = {
-        {"Я", "ТЫ", "ОН", "ОНА", "МЫ", "ВЫ", "ОН"},
-        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "НАС", "ВАС", "ИХ"},
-        {"МНЕ", "ТЕБЕ", "ЕМУ", "ЕЙ", "НАМ", "ВАМ", "ИМ"},
-        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "НАС", "ВАС", "ИХ"},
-        {"МНОЙ", "ТОБОЙ", "ИМ", "ЕЙ", "НАМИ", "ВАМИ", "ИМИ"},
-        {"МНЕ", "ТЕБЕ", "НЁМ", "НЕЙ", "НАС", "ВАС", "НИХ"}
+        {"Я", "ТЫ", "ОН", "ОНА", "ОНО", "МЫ", "ВЫ", "ОН"},
+        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "ЕГО", "НАС", "ВАС", "ИХ"},
+        {"МНЕ", "ТЕБЕ", "ЕМУ", "ЕЙ", "ЕГО", "НАМ", "ВАМ", "ИМ"},
+        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "ЕМУ", "НАС", "ВАС", "ИХ"},
+        {"МНОЙ", "ТОБОЙ", "ИМ", "ЕЙ", "ИМ", "НАМИ", "ВАМИ", "ИМИ"},
+        {"МНЕ", "ТЕБЕ", "НЁМ", "НЕЙ", "НЁМ", "НАС", "ВАС", "НИХ"}
     };
 
-    public String[][] possessivePronouns = {};
+    public String[][] possessivePronounsFirstPersonSingular = {
+        {"МОЙ", "МОЕГО", "МОЕМУ", "МОЙ, МОЕГО", "МОИМ", "МОЁМ"},
+        {"МОЯ", "МОЕЙ", "МОЕЙ", "МОЮ", "МОЕЙ", "МОЕЙ"},
+        {"МОЁ", "МОЕГО", "МОЕМУ", "МОЁ", "МОИМ", "МОЁМ"},
+        {"МОИ", "МОИХ", "МОИМ", "МОИ, МОИХ", "МОИМИ", "МОИХ"}
+    };
+    
+    public String[][] possessivePronounsFirstPersonPlural = {
+        {"НАШ", "НАШЕГО", "НАШЕМУ", "НАШ, НАШЕГО", "НАШИМ", "НАШЕМ"},
+        {"НАША", "НАШЕЙ", "НАШЕЙ", "НАШУ", "НАШЕЙ", "НАШЕЙ"},
+        {"НАШЕ", "НАШЕГО", "НАШЕМУ", "НАШЕ", "НАШИМ", "НАШЕМ"},
+        {"НАШИ", "НАШИХ", "НАШИМ", "НАШИ, НАШИХ", "НАШИМИ", "НАШИХ"}
+    };
+    
+    public String[][] possessivePronounsSecondPersonSingular = {
+        {"ТВОЙ", "ТВОЕГО", "ТВОЕМУ", "ТВОЙ, ТВОЕГО", "ТВОИМ", "ТВОЁМ"},
+        {"ТВОЯ", "ТВОЕЙ", "ТВОЕЙ", "ТВОЮ", "ТВОЕЙ", "ТВОЕЙ"},
+        {"ТВОЁ", "ТВОЕГО", "ТВОЕМУ", "ТВОЁ", "ТВОИМ", "ТВОЁМ"},
+        {"ТВОИ", "ТВОИХ", "ТВОИМ", "ТВОИ, ТВОИХ", "ТВОИМИ", "ТВОИХ"}
+    };
+    
+    public String[][] possessivePronounsSecondPersonPlural = {
+        {"ВАШ", "ВАШЕГО", "ВАШЕМУ", "ВАШ, ВАШЕГО", "ВАШИМ", "ВАШЕМ"},
+        {"ВАША", "ВАШЕЙ", "ВАШЕЙ", "ВАШУ", "ВАШЕЙ", "ВАШЕЙ"},
+        {"ВАШЕ", "ВАШЕГО", "ВАШЕМУ", "ВАШЕ", "ВАШИМ", "ВАШЕМ"},
+        {"ВАШИ", "ВАШИХ", "ВАШИМ", "ВАШИ, ВАШИХ", "ВАШИМИ", "ВАШИХ"}
+    };
+    
+    public String[] possessivePronounsThirdPerson = {
+        "Third person singular always use Его (m., n.) or Её (f) regardless of the case of the noun modifier",
+        "Third person plural always use Их regardless of gender and case of the nound modifier"
+    };
+    
+    public String[][] reflexivePossessivePronouns = {};
 
     public String[] audioFileNames = { // should contain the names of the audio files that comes with the application
     };

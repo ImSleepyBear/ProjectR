@@ -7,17 +7,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLAlphabetView">
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLAlphabetView">
    <children>
       <Button layoutX="958.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnReturn" text="Return" />
       <Pane layoutX="146.0" layoutY="29.0" prefHeight="416.0" prefWidth="733.0">
          <children>
             <TableView fx:id="tableView" layoutY="42.0" prefHeight="374.0" prefWidth="733.0">
               <columns>
-                <TableColumn fx:id="russian" prefWidth="183.0" text="Russian Letters" />
-                  <TableColumn fx:id="pronunciation" prefWidth="183.0" text="Pronunciation" />
-                <TableColumn fx:id="latin" minWidth="0.0" prefWidth="183.0" text="Latin Letters" />
-                  <TableColumn fx:id="consonantVowel" prefWidth="183.0" text="Consonant/Vowel" />
+                <TableColumn fx:id="russian" prefWidth="183.0" sortable="false" text="Russian Letters" />
+                  <TableColumn fx:id="pronunciation" prefWidth="183.0" sortable="false" text="Pronunciation" />
+                <TableColumn fx:id="latin" minWidth="0.0" prefWidth="183.0" sortable="false" text="Latin Letters" />
+                  <TableColumn fx:id="consonantVowel" prefWidth="183.0" sortable="false" text="Consonant/Vowel" />
               </columns>
             </TableView>
             <Label layoutX="268.0" layoutY="14.0" text="Russian Alphabet with translitteration" />
