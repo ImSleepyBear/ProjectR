@@ -2,7 +2,6 @@
 package projectrussian;
 
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 
 /**
  *
@@ -10,10 +9,10 @@ import javafx.beans.property.StringProperty;
  */
 public class TableviewHelperAlphabet {
     
-    private SimpleStringProperty russianLetter;
-    private SimpleStringProperty pronunciation;
-    private SimpleStringProperty latinLetter;
-    private SimpleStringProperty consonantVowel;
+    private final SimpleStringProperty russianLetter;
+    private final SimpleStringProperty pronunciation;
+    private final SimpleStringProperty latinLetter;
+    private final SimpleStringProperty consonantVowel;
     
     private final ListStorage listStorage = new ListStorage();
     
@@ -31,10 +30,6 @@ public class TableviewHelperAlphabet {
     public void setRussian(String russian) {
         russianLetter.set(russian);
     }
-
-    private StringProperty russianProperty(){
-        return russianLetter;
-    }
     
     public String getPronunciation(){
         return pronunciation.get();
@@ -42,10 +37,6 @@ public class TableviewHelperAlphabet {
     
     public void setPronunciation(String word){
         pronunciation.set(word);
-    }
-    
-    private StringProperty pronounciationProperty(){
-        return pronunciation;
     }
     
     public String getLatin() {
@@ -56,20 +47,12 @@ public class TableviewHelperAlphabet {
         latinLetter.set(latin);
     }
     
-    private StringProperty latinProperty(){
-        return latinLetter;
-    }
-    
     public String getConsonantVowel() {
         return consonantVowel.get();
     }
 
     public void setConsonantVowel(String consonantVowel) {
         latinLetter.set(consonantVowel);
-    }
-    
-    private StringProperty consonantVowelProperty(){
-        return latinLetter;
     }
     
 }

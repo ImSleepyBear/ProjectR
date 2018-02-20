@@ -6,14 +6,20 @@ package projectrussian;
  */
 public class ListStorage {
 
+    
+    // lists used in the main view
+    
     public String[] mainMenuListview = {
-        "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Info (Coming Soon)", "Settings (Coming Soon)"
+        "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Language and Country Info (Coming Soon)", "Settings (Coming Soon)"
     };
 
     public String[] sceneDestinations = {
         "AlphabetView", "Grammar", "Practice", "GeneralInfo", "Settings", "MainPage"
     };
 
+    
+    //lists that deals with the russian alphabet
+    
     public String[] russianLetters = {
         "А а", "Б б", "В в", "Г г", "Д д", "Е е", "Ё ё", "Ж ж", "З з", "И и", "Й й", "К к",
         "Л л", "М м", "Н н", "О о", "П п", "Р р", "С с", "Т т", "У у", "Ф ф", "Х х", "Ц ц",
@@ -40,8 +46,11 @@ public class ListStorage {
         "Consonant", "Consonant", "Consonant", "Consonant", "Vowel", "Consonant", "Vowel", "Vowel", "Vowel"
     };
 
+    
+    //lists that has to do with listviews in the grammar, and generalinfo, part
+    
     public String[] grammarListview = {
-        "Beginner - Gender Endings", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case",
+        "Beginner - Gender", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case",
         "Beginner - Accusative Case", "Beginner - Nominative Case", "Beginner - Instrumentalis Case",
         "Beginner - Locative Case", "Beginner - Substantives/Nouns", "Beginner - Adjectives",
         "Beginner - Basic Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
@@ -59,6 +68,9 @@ public class ListStorage {
         "Old and Updated Alphabet Letters", "Miscellaneus - Names",
         "Miscellaneous - Weekdays", "Miscellaneous - Months"
     };
+    
+    
+    //lists regarding general info
 
     public String[] spellingRules = {
         "Unstressed O can't follow ж, ц, ч, ш, and щ; and instead uses the letter Е",
@@ -78,6 +90,9 @@ public class ListStorage {
         {"Russian", "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", " Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"}
     };
 
+    
+    //lists regarding grammar
+    
     public String[][] substantivesFeminineSingular = {
         {"-О", "-Е", "-ИЕ", "-МЯ"},
         {"-О", "-Е", "-ИЕ", "-МЯ"},
@@ -150,11 +165,18 @@ public class ListStorage {
     public String[] grammarTermsForTableview = {
         "Nominative", "Genitive", "Dative", "Accusative", "Imperative", "Locative"
     };
+    
+    public String[] grammarTermsForTableviewShort = {
+        "N", "G", "D", "A", "I", "L"
+    };
 
     public String[] genders = { //keep this variable for labels, or dispose of it if not used?
         "Feminine", "Masculine", "Neuter"
     };
 
+    public String genderInfo = "Russian has three genders, namely feminine, masculine, and neuter. They "
+            + "can most of the time be identified by the last letter.";
+    
     public String[] genderRules = {};
 
     public String[] singularPlural = { //keep this variable, or dispose of it?
@@ -162,12 +184,14 @@ public class ListStorage {
     };
 
     public String[][] personalPronouns = {
-        {"Я", "ТЫ", "ОН", "ОНА", "ОНО", "МЫ", "ВЫ", "ОН"},
-        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "ЕГО", "НАС", "ВАС", "ИХ"},
-        {"МНЕ", "ТЕБЕ", "ЕМУ", "ЕЙ", "ЕГО", "НАМ", "ВАМ", "ИМ"},
-        {"МЕНЯ", "ТЕБЯ", "ЕГО", "ЕЁ", "ЕМУ", "НАС", "ВАС", "ИХ"},
-        {"МНОЙ", "ТОБОЙ", "ИМ", "ЕЙ", "ИМ", "НАМИ", "ВАМИ", "ИМИ"},
-        {"МНЕ", "ТЕБЕ", "НЁМ", "НЕЙ", "НЁМ", "НАС", "ВАС", "НИХ"}
+        {"Я", "МЕНЯ", "МНЕ", "МЕНЯ", "МНОЙ", "МНЕ"},
+        {"ТЫ", "ТЕБЯ", "ТЕБЕ", "ТЕБЯ", "ТОБОЙ", "ТЕБЕ"},
+        {"ОН", "ЕГО", "ЕМУ", "ЕГО", "ИМ", "НЁМ"},
+        {"ОНА", "ЕЁ", "ЕЙ", "ЕЁ", "ЕЙ", "НЕЙ"},
+        {"ОНО", "ЕГО", "ЕГО", "ЕМУ", "ИМ", "НЁМ"},
+        {"МЫ", "НАС", "НАМ", "НАС", "НАМИ", "НАС"},
+        {"ВЫ", "ВАС", "ВАМ", "ВАС", "ВАМИ", "ВАС"},
+        {"ОН", "ИХ", "ИМ", "ИХ", "ИМИ", "НИХ"}
     };
 
     public String[][] possessivePronounsFirstPersonSingular = {
@@ -205,6 +229,9 @@ public class ListStorage {
     
     public String[][] reflexivePossessivePronouns = {};
 
+    
+    //lists that deals with possible audio, and image files
+    
     public String[] audioFileNames = { // should contain the names of the audio files that comes with the application
     };
 

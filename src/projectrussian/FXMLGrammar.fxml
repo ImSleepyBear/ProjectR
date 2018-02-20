@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLGrammar">
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectrussian.FXMLGrammar">
    <children>
       <Button layoutX="958.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnReturn" text="Return" />
       <Pane layoutX="146.0" layoutY="29.0" prefHeight="416.0" prefWidth="733.0">
@@ -18,20 +18,26 @@
             <Label layoutX="342.0" layoutY="14.0" text="Grammar" />
             <ListView fx:id="grammarTopics" layoutY="42.0" prefHeight="374.0" prefWidth="245.0" />
             <TextFlow fx:id="textflow" layoutX="255.0" layoutY="42.0" prefHeight="374.0" prefWidth="478.0" />
-            <MenuButton fx:id="menuButtonGender" layoutX="576.0" layoutY="42.0" mnemonicParsing="false" text="Gender" />
-            <MenuButton fx:id="menuButtonMultiples" layoutX="653.0" layoutY="42.0" mnemonicParsing="false" text="Multiples" />
-            <TableView fx:id="tableView" layoutX="255.0" layoutY="82.0" prefHeight="334.0" prefWidth="478.0">
+            <MenuButton fx:id="menuButtonGender" layoutX="576.0" layoutY="42.0" mnemonicParsing="false" text="Gender" visible="false" />
+            <MenuButton fx:id="menuButtonMultiples" layoutX="653.0" layoutY="42.0" mnemonicParsing="false" text="Multiples" visible="false" />
+            <TableView fx:id="tableView" layoutX="248.0" layoutY="116.0" prefHeight="300.0" prefWidth="487.0" visible="false">
               <columns>
-                <TableColumn fx:id="column1" prefWidth="75.0" sortable="false" text="C1" />
-                <TableColumn fx:id="column2" prefWidth="75.0" sortable="false" text="C2" />
-                  <TableColumn fx:id="column3" prefWidth="75.0" sortable="false" text="C3" />
-                  <TableColumn fx:id="column4" prefWidth="75.0" sortable="false" text="C4" />
-                  <TableColumn fx:id="column5" prefWidth="75.0" sortable="false" text="C5" />
-                  <TableColumn fx:id="column6" prefWidth="75.0" sortable="false" text="C6" />
+                <TableColumn fx:id="column1" prefWidth="52.8" sortable="false" text="C1" />
+                <TableColumn fx:id="column2" prefWidth="52.8" sortable="false" text="C2" />
+                  <TableColumn fx:id="column3" prefWidth="52.8" sortable="false" text="C3" />
+                  <TableColumn fx:id="column4" prefWidth="52.8" sortable="false" text="C4" />
+                  <TableColumn fx:id="column5" prefWidth="52.8" sortable="false" text="C5" />
+                  <TableColumn fx:id="column6" prefWidth="52.8" sortable="false" text="C6" />
+                  <TableColumn fx:id="column7" prefWidth="52.8" sortable="false" text="C7" />
+                  <TableColumn fx:id="column8" prefWidth="52.8" sortable="false" text="C8" />
+                  <TableColumn fx:id="column9" prefWidth="52.8" sortable="false" text="C9" />
               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
             </TableView>
          </children>
       </Pane>
-      <Button layoutX="917.0" layoutY="276.0" mnemonicParsing="false" onAction="#tableVisibility" text="visibility test" />
+      <Button layoutX="917.0" layoutY="276.0" mnemonicParsing="false" onAction="#visibility" text="visibility test" visible="false" />
    </children>
 </AnchorPane>
