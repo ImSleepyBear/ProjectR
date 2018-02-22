@@ -16,53 +16,98 @@ import javafx.collections.ObservableList;
  */
 public class RetrieveTableviewData {
     
+    //one item
     public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1) {
-
         List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
-
         for (int i = 0; i < c1.length; i++) {
             list.add(new GrammarTopicsTableviewHelper(c1[i], null, null, null, null, null, null, null, null));
         }
-
         ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
         return data;
     }
 
-    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3, String[][] c4, String[][] c5) {
-
+    //two items
+    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[] c2) {
         List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
-
+        for (int i = 0; i < c1.length; i++) {
+            list.add(new GrammarTopicsTableviewHelper(c1[i], c2[i], null, null, null, null, null, null, null));
+        }
+        ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
+        return data;
+    }
+    
+    //three items
+    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3) {
+        List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
+        for (int i = 0; i < c1.length; i++) {
+            list.add(new GrammarTopicsTableviewHelper(c1[i], c2[0][i], c3[1][i], null, null, null, null, null, null));
+        }
+        ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
+        return data;
+    }
+    
+    //four items
+    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[] c2, String[] c3, String[] c4) {
+        List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
+        for (int i = 0; i < c1.length; i++) {
+            list.add(new GrammarTopicsTableviewHelper(c1[i], c2[i], c3[i], c4[i], null, null, null, null, null));
+        }
+        ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
+        return data;
+    }
+    
+    //five items
+    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3, String[][] c4, 
+            String[][] c5) {
+        List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
         for (int i = 0; i < c1.length; i++) {
             list.add(new GrammarTopicsTableviewHelper(c1[i], c2[0][i], c3[1][i], c4[2][i], c5[3][i], null, null, null, null));
         }
-
         ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
         return data;
     }
-
-    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3,
-            String[][] c4, String[][] c5, String[][] c6, String[][] c7, String[][] c8, String[][] c9) {
-
+    //six items
+    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3, String[][] c4, 
+            String[][] c5, String[][] c6) {
         List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
-
         for (int i = 0; i < c1.length; i++) {
-            list.add(new GrammarTopicsTableviewHelper(c1[i], c2[0][i], c3[1][i], c4[2][i], c5[3][i], c6[4][i], c7[5][i], c8[6][i], c9[7][i]));
+            list.add(new GrammarTopicsTableviewHelper(c1[i], c2[0][i], c3[1][i], c4[2][i], c5[3][i], c6[4][i], null, null, null));
         }
-
+        ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
+        return data;
+    }
+    //seven items
+    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3, String[][] c4, 
+            String[][] c5, String[][] c6, String[][] c7) {
+        List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
+        for (int i = 0; i < c1.length; i++) {
+            list.add(new GrammarTopicsTableviewHelper(c1[i], c2[0][i], c3[1][i], c4[2][i], c5[3][i], c6[4][i], c7[5][i], null, null));
+        }
         ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
         return data;
     }
 
+    //eight items
     public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3,
             String[][] c4, String[][] c5, String[][] c6, String[][] c7, String[][] c8) {
-
         List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
-
         for (int i = 0; i < c1.length; i++) {
             list.add(new GrammarTopicsTableviewHelper(c1[i], c2[0][i], c3[1][i], c4[2][i], c5[3][i], c6[4][i], c7[5][i], c8[6][i], null));
         }
-
         ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
         return data;
     }
+    
+    
+    //nine items
+    public ObservableList<GrammarTopicsTableviewHelper> getData(String[] c1, String[][] c2, String[][] c3,
+            String[][] c4, String[][] c5, String[][] c6, String[][] c7, String[][] c8, String[][] c9) {
+        List<GrammarTopicsTableviewHelper> list = new ArrayList<>();
+        for (int i = 0; i < c1.length; i++) {
+            list.add(new GrammarTopicsTableviewHelper(c1[i], c2[0][i], c3[1][i], c4[2][i], c5[3][i], c6[4][i], c7[5][i], c8[6][i], c9[7][i]));
+        }
+        ObservableList<GrammarTopicsTableviewHelper> data = FXCollections.observableArrayList(list);
+        return data;
+    }
+
 }

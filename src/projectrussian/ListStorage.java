@@ -8,7 +8,6 @@ public class ListStorage {
 
     
     // lists used in the main view
-    
     public String[] mainMenuListview = {
         "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Language and Country Info (Coming Soon)", "Settings (Coming Soon)"
     };
@@ -48,12 +47,11 @@ public class ListStorage {
 
     
     //lists that has to do with listviews in the grammar, and generalinfo, part
-    
     public String[] grammarListview = {
         "Beginner - Gender", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case",
         "Beginner - Accusative Case", "Beginner - Nominative Case", "Beginner - Instrumentalis Case",
         "Beginner - Locative Case", "Beginner - Substantives/Nouns", "Beginner - Adjectives",
-        "Beginner - Basic Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
+        "Beginner - Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
         "Beginner - Verbs", "Beginner - Preteritum", "Beginner - Verb Aspects", "Beginner - Imperative",
         "Beginner",
         "Intermediate - Verbs in Past Tense",
@@ -71,7 +69,6 @@ public class ListStorage {
     
     
     //lists regarding general info
-
     public String[] spellingRules = {
         "Unstressed O can't follow ж, ц, ч, ш, and щ; and instead uses the letter Е",
         "Я is written as A, and Ю is written as У, after the letters Г, К, Ж, Х, Ш, and Щ",
@@ -92,65 +89,60 @@ public class ListStorage {
 
     
     //lists regarding grammar
-    
-    public String[][] substantivesFeminineSingular = {
-        {"-О", "-Е", "-ИЕ", "-МЯ"},
-        {"-О", "-Е", "-ИЕ", "-МЯ"},
-        {"-А", "-Я", "-ИЯ", "-МЕНИ"},
-        {"-У", "-Ю", "-ИЮ", "-МЕНИ"},
-        {"-О", "-Е", "-ИЕ", "-МЯ"},
-        {"-ОМ", "-ЕМ", "-ИЕМ", "-МЕНЕМ"},
-        {"-Е", "-Е", "-ИИ", "-МЕНИ"},
+    public String[] feminineSubstantiveEndings = {
+        "Terms", "-А", "-ГА, -КА etc.", "-Я", "-ИЯ", "-Ь"
     };
     
-    public String[][] substantivesFemininePlural = {
-        {"-О", "-Е", "-ИЕ", "-МЯ"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
+    public String[] masculineSubstantiveEndings = {
+        "Terms", "hard", "-Ь", "-Ж, -Ч, -Ш, -Щ", "-АЙ"
+    };
+    
+    public String[] neutralSubstantiveEndings = {
+        "Terms", "-О", "-Е", "-ИЕ", "-МЯ"
+    };
+    
+    public String[][] substantivesNeutralSingular = {
+        {"-О", "-А", "-У", "-О", "-ОМ", "-Е"},
+        {"-Е", "-Я", "-Ю", "-Е", "-ЕМ", "-Е"},
+        {"-ИЕ", "-ИЯ", "-ИЮ", "-ИЕ", "-ИЕМ", "-ИИ"},
+        {"-МЯ", "-МЕНИ", "-МЕНИ", "-МЯ", "-МЕНЕМ", "-МЕНИ"},
+    };
+    
+    public String[][] substantivesNeutralPlural = {
+        {"-А", "-", "-АМ", "-А", "-АМИ", "-АХ"},
+        {"-ЯА", "-ЕЙ", "-ЯМ", "-Я", "-ЯМИ", "-ЯХ"},
+        {"-Я", "-Й", "-ЯМ", "-Я", "-ЯМИ", "-ЯХ"},
+        {"-ЕНА", "-ЁН", "-ЕНАМ", "-ЕНА", "-ЕНАМИ", "-ЕНАХ"}
     };
     
     public String[][] substantivesMasculineSingular = {
-        {"hard", "-Ь", "-Ж, -Ч, -Ш, -Щ", "-АЙ"},
-        {"N/A", "-Ь", "-", "-АЙ"},
-        {"-А", "N/A", "-А", "-АЯ"},
-        {"-У", "-Ю", "-У", "-АЮ"},
-        {"N/A", "-Я", "-", "-АЙ"},
-        {"-ОМ", "-ЕМ", "-ОМ", "-АЕМ"},
-        {"-Е", "-Е", "-Е", "-АЕ"}
+        {"-", "-А", "-У", "-", "-ОМ", "-Е"},
+        {"-Ь", "-", "-Ю", "-Я", "-ЕМ", "-Е"},
+        {"-", "-А", "-У", "-", "-ОМ", "-Е"},
+        {"-АЙ", "-АЯ", "-АЮ", "-АЙ", "-АЕМ", "-АЕ"}
     };
     
     public String[][] substantivesMasculinePlural = {
-        {"hard", "-Ь", "-Ж, -Ч, -Ш, -Щ", "-АЙ"},
-        {"-Ы", "-И", "-И", "-Й"},
-        {"-ОВ", "-ЕЙ", "-ЕЙ", "-ЕВ"},
-        {"-АМ", "-ЯМ", "-АМ", "-ЯМ"},
-        {"-Ы", "-ЕЙ", "-И", "-И"},
-        {"-АМИ", "-ЯМИ", "-АМИ", "-ЯМИ"},
-        {"-АХ", "-ЯХ", "-АХ", "-ЯХ"}
+        {"-Ы", "-ОВ", "-АМ", "-Ы", "-АМИ", "-АХ"},
+        {"-И", "-ЕЙ", "-ЯМ", "-ЕЙ", "-ЯМИ", "-ЯХ"},
+        {"-И", "-ЕЙ", "-АМ", "-И", "-АМИ", "-АХ"},
+        {"-Й", "-ЕВ", "-ЯМ", "-И", "-ЯМИ", "-ЯХ"}
     };
     
-    public String[][] substantivesNeuterSingular = {
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
+    public String[][] substantivesFeminineSingular = {
+        {"-А", "-Ы", "-Е", "-У", "-ОЙ", "-Е"},
+        {"-А", "-И", "-Е", "-У", "-ОЙ", "-Е"},
+        {"-Я", "-И", "-Е", "-Ю", "-ЕЙ", "-Е"},
+        {"-ИЯ", "-ИИ", "-ИИ", "-ИЮ", "-ИЕЙ", "-ИИ"},
+        {"-Ь", "-И", "-И", "-Ь", "-Ю", "-И"}
     };
     
-    public String[][] substantivesNeuterPlural = {
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
-        {"-", "-", "-", "-"},
+    public String[][] substantivesFemininePlural = {
+        {"-Ы", "-", "-АМ", "-Ы", "-АМИ", "-АХ"},
+        {"-КИ", "-ЕК", "-КАМ", "-ЕК", "-КАМИ", "-КАХ"},
+        {"-И", "-Ь", "-ЯМ", "-И", "-ЯМИ", "-ЯХ"},
+        {"-ИИ", "-ИЙ", "-ИЯМ", "-ИИ", "-ИЯМИ", "-ИЯХ"},
+        {"-И", "-ЕЙ", "-ЯИ", "-И", "-ЯМИ", "-ЯХ"}
     };
 
     public String[] adjectives = {};
@@ -183,6 +175,10 @@ public class ListStorage {
         "Singular", "Plural"
     };
 
+    public String[] englishPersonalPronouns = {
+        "Terms", "I/Me", "You", "He/Him", "She/Her", "It", "We/Us", "You", "They/Them"
+    };
+    
     public String[][] personalPronouns = {
         {"Я", "МЕНЯ", "МНЕ", "МЕНЯ", "МНОЙ", "МНЕ"},
         {"ТЫ", "ТЕБЯ", "ТЕБЕ", "ТЕБЯ", "ТОБОЙ", "ТЕБЕ"},
@@ -194,6 +190,11 @@ public class ListStorage {
         {"ОН", "ИХ", "ИМ", "ИХ", "ИМИ", "НИХ"}
     };
 
+    public String[] possessivePronounsPerson = {
+        "First person singular", "First person plural", "Second person singular", "Second person plural",
+        "Third person singular", "Third person plural"
+    };
+    
     public String[][] possessivePronounsFirstPersonSingular = {
         {"МОЙ", "МОЕГО", "МОЕМУ", "МОЙ, МОЕГО", "МОИМ", "МОЁМ"},
         {"МОЯ", "МОЕЙ", "МОЕЙ", "МОЮ", "МОЕЙ", "МОЕЙ"},
@@ -231,7 +232,6 @@ public class ListStorage {
 
     
     //lists that deals with possible audio, and image files
-    
     public String[] audioFileNames = { // should contain the names of the audio files that comes with the application
     };
 

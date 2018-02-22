@@ -18,8 +18,7 @@
             <Label layoutX="342.0" layoutY="14.0" text="Grammar" />
             <ListView fx:id="grammarTopics" layoutY="42.0" prefHeight="374.0" prefWidth="245.0" />
             <TextFlow fx:id="textflow" layoutX="255.0" layoutY="42.0" prefHeight="374.0" prefWidth="478.0" />
-            <MenuButton fx:id="menuButtonGender" layoutX="576.0" layoutY="42.0" mnemonicParsing="false" text="Gender" visible="false" />
-            <MenuButton fx:id="menuButtonMultiples" layoutX="653.0" layoutY="42.0" mnemonicParsing="false" text="Multiples" visible="false" />
+            <MenuButton fx:id="generalMenuButton" layoutX="653.0" layoutY="42.0" mnemonicParsing="false" text="Editable" visible="false" />
             <TableView fx:id="tableView" layoutX="248.0" layoutY="116.0" prefHeight="300.0" prefWidth="487.0" visible="false">
               <columns>
                 <TableColumn fx:id="column1" prefWidth="52.8" sortable="false" text="C1" />
@@ -38,6 +37,5 @@
             </TableView>
          </children>
       </Pane>
-      <Button layoutX="917.0" layoutY="276.0" mnemonicParsing="false" onAction="#visibility" text="visibility test" visible="false" />
    </children>
 </AnchorPane>
