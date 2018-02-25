@@ -48,17 +48,12 @@ public class ListStorage {
     
     //lists that has to do with listviews in the grammar, and generalinfo, part
     public String[] grammarListview = {
-        "Beginner - Gender", "Beginner - Case", "Beginner - Genitive Case", "Beginner - Dative Case",
-        "Beginner - Accusative Case", "Beginner - Nominative Case", "Beginner - Instrumentalis Case",
-        "Beginner - Locative Case", "Beginner - Substantives/Nouns", "Beginner - Adjectives",
-        "Beginner - Possessive Pronouns", "Beginner - Personal Pronouns", "Beginner - Numerals",
-        "Beginner - Verbs", "Beginner - Preteritum", "Beginner - Verb Aspects", "Beginner - Imperative",
-        "Beginner",
-        "Intermediate - Verbs in Past Tense",
-        "Intermediate",
-        "Advanced - Verbs in Past Futurum",
-        "Advanced",
-        "Demonstrative Pronouns", "Determinative Pronouns", "Interrogative Pronouns"
+        "Accusative Case", "Adjectives", "Case", "Dative Case", "Demonstrative Pronouns", 
+        "Determinative Pronouns", "Emphatic Pronouns", "Gender", "Genitive Case", "Imperative", 
+        "Instrumentalis Case", "Interrogative Pronouns", "Locative Case", "Nominative Case", "Numerals", 
+        "Personal Pronouns", "Possessive Pronouns", "Preteritum", "Reflexive Pronouns",
+        "Substantives/Nouns", "Verbs", "Verb Aspects", "Verbs in Past Tense", "Verbs in Past Futurum",
+        
     };
 
     public String[] generalInfoListview = {
@@ -133,7 +128,7 @@ public class ListStorage {
         {"-А", "-Ы", "-Е", "-У", "-ОЙ", "-Е"},
         {"-А", "-И", "-Е", "-У", "-ОЙ", "-Е"},
         {"-Я", "-И", "-Е", "-Ю", "-ЕЙ", "-Е"},
-        {"-ИЯ", "-ИИ", "-ИИ", "-ИЮ", "-ИЕЙ", "-ИИ"},
+        {"-Я", "-И", "-И", "-Ю", "-ЕЙ", "-И"},
         {"-Ь", "-И", "-И", "-Ь", "-Ю", "-И"}
     };
     
@@ -141,13 +136,14 @@ public class ListStorage {
         {"-Ы", "-", "-АМ", "-Ы", "-АМИ", "-АХ"},
         {"-КИ", "-ЕК", "-КАМ", "-ЕК", "-КАМИ", "-КАХ"},
         {"-И", "-Ь", "-ЯМ", "-И", "-ЯМИ", "-ЯХ"},
-        {"-ИИ", "-ИЙ", "-ИЯМ", "-ИИ", "-ИЯМИ", "-ИЯХ"},
+        {"-И", "-Й", "-ЯМ", "-И", "-ЯМИ", "-ЯХ"},
         {"-И", "-ЕЙ", "-ЯИ", "-И", "-ЯМИ", "-ЯХ"}
     };
 
     public String[] adjectives = {};
 
-    public String[] verbs = {};
+    public String[] verbsConjugationE = {};
+    public String[] verbsConjugationI = {};
 
     public String[] grammaticalTerms = {
         "Accusative", "Adverbs", "Case", "Dative", "Gender", "Genitive", "Imperative", "Imperfect",
@@ -166,6 +162,10 @@ public class ListStorage {
         "Feminine", "Masculine", "Neuter"
     };
 
+    public String[] gendersAndMultiple = {
+        "Feminine", "Masculine", "Neuter", "Plural"
+    };
+    
     public String genderInfo = "Russian has three genders, namely feminine, masculine, and neuter. They "
             + "can most of the time be identified by the last letter.";
     
@@ -191,8 +191,8 @@ public class ListStorage {
     };
 
     public String[] possessivePronounsPerson = {
-        "First person singular", "First person plural", "Second person singular", "Second person plural",
-        "Third person singular", "Third person plural"
+        "First person singular", "First person plural", "Second person singular", 
+        "Second person plural", "Third person singular", "Third person plural"
     };
     
     public String[][] possessivePronounsFirstPersonSingular = {
@@ -228,8 +228,71 @@ public class ListStorage {
         "Third person plural always use Их regardless of gender and case of the nound modifier"
     };
     
-    public String[][] reflexivePossessivePronouns = {};
+    public String[] reflexivePronouns = {
+        "Personal", "Possessive"
+    };
+    public String personalReflexivePosessivePronoun = "Себя (-self)";
+    public String englishPersonalReflexivePosessivePronoun = "Myself, himself, herself";
+    
+    public String[] personalReflexivePossessivePronouns = {
+        "---", "Себя", "Себя", "Себе", "Себой", "Себе"
+    };
+    
+    public String possesiveReflexivePosessivePronoun = "Свой";
+    public String englishPossesiveReflexivePOsessicePronoun = "My own, his own, her own";
+    
+    public String[][] possessiveReflexivePossessivePronouns = {
+        {"Свой", "Свой, Своего", "Своего", "Своему", "Своим", "Своем"},
+        {"Своя", "Свою", "Своей", "Своей", "Своей", "Своей"},
+        {"Своё", "Своё", "Своего", "Своему", "Своим", "Своём"},
+        {"Свои", "Свом, Свосх", "Своих", "Своим", "Своими", "Своих"}
+    };
 
+    public String emphaticPronoun = "Сам";
+    public String englishEmphaticPronoun = "Myself, himself, herself";
+    
+    public String[][] emphaticPronouns = {
+        {"Сам", "Сам, Самого", "Самого", "Самому", "Самим", "Свмом"},
+        {"Сама", "Саму", "Самой", "Самой", "Самой", "Самой"},
+        {"Само", "Саму", "Самого", "Самому", "Самим", "Самом"},
+        {"Сами", "Сами, Самих", "Самих", "Самим", "Самими", "Самих"}
+    };
+    
+    public String[] demonstrativePronouns = {
+        "This", "That"
+    };
+    
+    public String[][] demonstrativePronounsThis = {
+        {"Этот", "Этот, Этого", "Этого", "Этому", "Этим", "Этом"},
+        {"Эта", "Эту", "Этой", "Этой", "Этой", "Этой"},
+        {"Это", "Это", "Этого", "Этому", "Этим", "Этом"},
+        {"Этом", "Этм, Этих", "Этих", "Этим", "Этими", "Этих"}
+    };
+    
+    public String[][] demonstrativePronounsThat = {
+        {"Тот", "Тот, Того", "Того", "Тому", "Тем", "Том"},
+        {"Та", "Ту", "Той", "Той", "Той", "Той"},
+        {"То", "То", "Того", "Тому", "Тем", "Том"},
+        {"Те", "Те, Тех", "Тех", "Тем", "Теми", "Тех"}
+    };
+    
+    public String englishDeterminativePronoun = "All, the whole";
+    
+    public String[][] determinativePronouns = {
+        {"Весь", "Весь, Всего", "Всего", "Всему", "Всем", "Всём"},
+        {"Вся", "Всю", "Всей", "Всей", "Всей", "Всей"},
+        {"Всё", "Всё", "Всего", "Всему", "Всем", "Всём"},
+        {"Все", "Все, Всех", "Всех", "Всем", "Всеми", "Всех"}
+    };
+    
+    public String[] englighInterrogativePronouns = {
+        "What?", "Who"
+    };
+    
+    public String[][] interrogativePronouns = {
+        {"Что", "Что", "Чего", "Чему", "Чем", "Чём"},
+        {"Кто", "Кого", "Кого", "Кому", "Кем", "Ком"}
+    };
     
     //lists that deals with possible audio, and image files
     public String[] audioFileNames = { // should contain the names of the audio files that comes with the application

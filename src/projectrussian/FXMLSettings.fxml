@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
@@ -11,6 +12,10 @@
       <Pane layoutX="146.0" layoutY="29.0" prefHeight="416.0" prefWidth="733.0">
          <children>
             <Label layoutX="345.0" layoutY="14.0" text="Settings" />
+            <MenuButton fx:id="languageGrammar" layoutY="42.0" mnemonicParsing="false" text="Language Grammar" />
+            <Label layoutX="148.0" layoutY="46.0" text="Current Language: Russian" />
+            <MenuButton fx:id="languageProgram" layoutY="72.0" mnemonicParsing="false" text="Program Language" />
+            <Label layoutX="148.0" layoutY="72.0" text="Current Language: English" />
          </children>
       </Pane>
    </children>
