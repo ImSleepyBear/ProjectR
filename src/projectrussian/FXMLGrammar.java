@@ -140,19 +140,35 @@ public class FXMLGrammar implements Initializable {
              17 = Preteritum
              18 = Reflexive Pronouns
              19 = Substantives/Nouns
-             20 = Verbs
-             21 = Verb Aspects
+             20 = Verb Aspects
+             21 = Verbs in Present Tense
              22 = Verbs in Past Tense
              23 = Verbs in Past Futurum
+             24 = Verbs of Motion
+             25 = Reflexive Verbs
              */
-            if (selectedItem == 4) { //demonstrative pronouns
+            if (selectedItem == 1) { //demonstrative pronouns
+                extraInfoText.setText("Currently showing hard adjectives (" + listStorage.normalAdjectivesHardDescription + ")");
+                tableView.setVisible(visibility);
+                generalMenuButton.setVisible(visibility);
+                setMenuItemVisibility(visibility, visibility, visibility, !visibility, !visibility, !visibility);
+                setNameMenubuttonAndItem("Adjectives", listStorage.englishAdjectives[0],
+                        listStorage.englishAdjectives[1], listStorage.englishAdjectives[2], null, null, null);
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
+                        listStorage.normalAdjectivesHard, listStorage.normalAdjectivesHard,
+                        listStorage.normalAdjectivesHard, listStorage.normalAdjectivesHard);
+                tableView.setItems(tableViewData);
+                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1],
+                        listStorage.gendersAndMultiple[2], listStorage.gendersAndMultiple[3], null, null, null, null);
+                tableView.getColumns().setAll(column1, column2, column3, column4, column5);
+            } else if (selectedItem == 4) { //demonstrative pronouns
                 extraInfoText.setText("Currently showing demonstrative pronoun this");
                 tableView.setVisible(visibility);
                 generalMenuButton.setVisible(visibility);
                 setMenuItemVisibility(visibility, visibility, !visibility, !visibility, !visibility, !visibility);
                 setNameMenubuttonAndItem("Demonstrative pronouns", listStorage.demonstrativePronouns[0],
                         listStorage.demonstrativePronouns[1], null, null, null, null);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.demonstrativePronounsThis, listStorage.demonstrativePronounsThis,
                         listStorage.demonstrativePronounsThis, listStorage.demonstrativePronounsThis);
                 tableView.setItems(tableViewData);
@@ -163,41 +179,52 @@ public class FXMLGrammar implements Initializable {
                 extraInfoText.setText(listStorage.englishDeterminativePronoun);
                 tableView.setVisible(visibility);
                 generalMenuButton.setVisible(!visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort, 
-                        listStorage.determinativePronouns, listStorage.determinativePronouns, 
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
+                        listStorage.determinativePronouns, listStorage.determinativePronouns,
                         listStorage.determinativePronouns, listStorage.determinativePronouns);
                 tableView.setItems(tableViewData);
-                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1], 
+                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1],
                         listStorage.gendersAndMultiple[2], listStorage.gendersAndMultiple[3], null, null, null, null);
                 tableView.getColumns().setAll(column1, column2, column3, column4, column5);
             } else if (selectedItem == 6) { //determinative pronouns
                 extraInfoText.setText(listStorage.emphaticPronoun + ", " + listStorage.englishEmphaticPronoun);
                 tableView.setVisible(visibility);
                 generalMenuButton.setVisible(!visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort, 
-                        listStorage.emphaticPronouns, listStorage.emphaticPronouns, 
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
+                        listStorage.emphaticPronouns, listStorage.emphaticPronouns,
                         listStorage.emphaticPronouns, listStorage.emphaticPronouns);
                 tableView.setItems(tableViewData);
-                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1], 
+                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1],
                         listStorage.gendersAndMultiple[2], listStorage.gendersAndMultiple[3], null, null, null, null);
                 tableView.getColumns().setAll(column1, column2, column3, column4, column5);
             } else if (selectedItem == 7) { //gender
                 extraInfoText.setText(listStorage.genderInfo);
+                tableView.setVisible(!visibility);
+                generalMenuButton.setVisible(!visibility);
             } else if (selectedItem == 11) { //interrogative pronouns
                 extraInfoText.setText("");
                 tableView.setVisible(visibility);
                 generalMenuButton.setVisible(!visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableview,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableview,
                         listStorage.interrogativePronouns, listStorage.interrogativePronouns);
                 tableView.setItems(tableViewData);
                 setColumnText("Terms", listStorage.englighInterrogativePronouns[0],
                         listStorage.englighInterrogativePronouns[1], null, null, null, null, null, null);
                 tableView.getColumns().setAll(column1, column2, column3);
+            } else if (selectedItem == 14) {
+                extraInfoText.setText("");
+                tableView.setVisible(visibility);
+                generalMenuButton.setVisible(!visibility);
+                tableViewData = rtd.getGrammarData(listStorage.numerals, listStorage.numerals, 
+                        listStorage.numerals);
+                tableView.setItems(tableViewData);
+                setColumnText("Numbers", "Numbers", "Numbers", null, null, null, null, null, null);
+                tableView.getColumns().setAll(column1, column2, column3);
             } else if (selectedItem == 15) { //personal pronouns
                 extraInfoText.setText("");
                 tableView.setVisible(visibility);
                 generalMenuButton.setVisible(!visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.personalPronouns, listStorage.personalPronouns, listStorage.personalPronouns,
                         listStorage.personalPronouns, listStorage.personalPronouns, listStorage.personalPronouns,
                         listStorage.personalPronouns, listStorage.personalPronouns);
@@ -217,7 +244,7 @@ public class FXMLGrammar implements Initializable {
                         listStorage.possessivePronounsPerson[3], listStorage.possessivePronounsPerson[4],
                         listStorage.possessivePronounsPerson[5]);
                 setMenuItemVisibility(visibility, visibility, visibility, visibility, visibility, visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.possessivePronounsFirstPersonSingular, listStorage.possessivePronounsFirstPersonSingular,
                         listStorage.possessivePronounsFirstPersonSingular, listStorage.possessivePronounsFirstPersonSingular);
                 tableView.setItems(tableViewData);
@@ -231,7 +258,7 @@ public class FXMLGrammar implements Initializable {
                 setNameMenubuttonAndItem("Reflexive Pronouns", listStorage.reflexivePronouns[0],
                         listStorage.reflexivePronouns[1], null, null, null, null);
                 setMenuItemVisibility(visibility, visibility, !visibility, !visibility, !visibility, !visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort, listStorage.personalReflexivePossessivePronouns);
+                tableViewData = rtd.getGGrammarData(listStorage.grammarTermsForTableviewShort, listStorage.personalReflexivePossessivePronouns);
                 tableView.setItems(tableViewData);
                 setColumnText("English", listStorage.englishPersonalReflexivePosessivePronoun, null,
                         null, null, null, null, null, null);
@@ -242,7 +269,7 @@ public class FXMLGrammar implements Initializable {
                 generalMenuButton.setVisible(visibility);
                 setNameMenubuttonAndItem("Substantive Endings", "Feminine Singular", "Feminine Plural",
                         "Masculine Singular", "Masculine Plural", "Neuter Singular", "Neuter Plural");
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.substantivesFeminineSingular, listStorage.substantivesFeminineSingular,
                         listStorage.substantivesFeminineSingular, listStorage.substantivesFeminineSingular);
                 tableView.setItems(tableViewData);
@@ -259,10 +286,20 @@ public class FXMLGrammar implements Initializable {
 
         generalItem1.setOnAction((ActionEvent event) -> {
             System.out.println("GeneralItem1 has fired");
-            if (selectedItem == 4) { //demonstrative pronouns
+            if (selectedItem == 1) {
+                extraInfoText.setText("Currently showing hard adjectives (" + listStorage.normalAdjectivesHardDescription + ")");
+                tableView.setVisible(visibility);
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
+                        listStorage.normalAdjectivesHard, listStorage.normalAdjectivesHard,
+                        listStorage.normalAdjectivesHard, listStorage.normalAdjectivesHard);
+                tableView.setItems(tableViewData);
+                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1],
+                        listStorage.gendersAndMultiple[2], listStorage.gendersAndMultiple[3], null, null, null, null);
+                tableView.getColumns().setAll(column1, column2, column3, column4, column5);
+            } else if (selectedItem == 4) { //demonstrative pronouns
                 extraInfoText.setText("Currently showing demonstrative pronoun this");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.demonstrativePronounsThis, listStorage.demonstrativePronounsThis,
                         listStorage.demonstrativePronounsThis, listStorage.demonstrativePronounsThis);
                 tableView.setItems(tableViewData);
@@ -272,14 +309,14 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 16) { //possessive pronouns
                 tableView.setVisible(visibility);
                 extraInfoText.setText("Currently showing first person in singular");
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.possessivePronounsFirstPersonSingular, listStorage.possessivePronounsFirstPersonSingular,
                         listStorage.possessivePronounsFirstPersonSingular, listStorage.possessivePronounsFirstPersonSingular);
                 tableView.setItems(tableViewData);
                 tableView.getColumns().setAll(column1, column2, column3, column4, column5);
             } else if (selectedItem == 18) { //reflexive pronouns
                 extraInfoText.setText("Currently showing personal reflexive pronouns");
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort, listStorage.personalReflexivePossessivePronouns);
+                tableViewData = rtd.getGGrammarData(listStorage.grammarTermsForTableviewShort, listStorage.personalReflexivePossessivePronouns);
                 tableView.setItems(tableViewData);
                 setColumnText("English", listStorage.englishPersonalReflexivePosessivePronoun, null,
                         null, null, null, null, null, null);
@@ -287,7 +324,7 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 19) { //Substantives/nouns
                 extraInfoText.setText("Currently showing feminine substantives in singular");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.substantivesFeminineSingular, listStorage.substantivesFeminineSingular,
                         listStorage.substantivesFeminineSingular, listStorage.substantivesFeminineSingular);
                 setColumnText(listStorage.feminineSubstantiveEndings[0], listStorage.feminineSubstantiveEndings[1],
@@ -300,10 +337,20 @@ public class FXMLGrammar implements Initializable {
 
         generalItem2.setOnAction((ActionEvent event) -> {
             System.out.println("GeneralItem2  has fired");
-            if (selectedItem == 4) { //demonstrative pronouns
+            if (selectedItem == 1) {
+                extraInfoText.setText("Currently showing soft adjectives (" + listStorage.normalAdjectivesSoftDescription + ")");
+                tableView.setVisible(visibility);
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
+                        listStorage.normalAdjectivesSoft, listStorage.normalAdjectivesSoft,
+                        listStorage.normalAdjectivesSoft, listStorage.normalAdjectivesSoft);
+                tableView.setItems(tableViewData);
+                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1],
+                        listStorage.gendersAndMultiple[2], listStorage.gendersAndMultiple[3], null, null, null, null);
+                tableView.getColumns().setAll(column1, column2, column3, column4, column5);
+            } else if (selectedItem == 4) { //demonstrative pronouns
                 extraInfoText.setText("Currently showing demonstrative pronoun that");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.demonstrativePronounsThat, listStorage.demonstrativePronounsThat,
                         listStorage.demonstrativePronounsThat, listStorage.demonstrativePronounsThat);
                 tableView.setItems(tableViewData);
@@ -313,14 +360,14 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 16) { //possessive pronouns
                 tableView.setVisible(visibility);
                 extraInfoText.setText("Currently showing first person in plural");
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.possessivePronounsFirstPersonPlural, listStorage.possessivePronounsFirstPersonPlural,
                         listStorage.possessivePronounsFirstPersonPlural, listStorage.possessivePronounsFirstPersonPlural);
                 tableView.setItems(tableViewData);
                 tableView.getColumns().setAll(column1, column2, column3, column4, column5);
             } else if (selectedItem == 18) { //reflexive pronouns
                 extraInfoText.setText("Currently showing possessive reflexive pronouns");
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort, listStorage.possessiveReflexivePossessivePronouns,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort, listStorage.possessiveReflexivePossessivePronouns,
                         listStorage.possessiveReflexivePossessivePronouns, listStorage.possessiveReflexivePossessivePronouns,
                         listStorage.possessiveReflexivePossessivePronouns);
                 tableView.setItems(tableViewData);
@@ -330,7 +377,7 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 19) { //Substantives/nouns
                 extraInfoText.setText("Currently showing feminine substantives in plural");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.substantivesFemininePlural, listStorage.substantivesFemininePlural,
                         listStorage.substantivesFemininePlural, listStorage.substantivesFemininePlural);
                 setColumnText(listStorage.feminineSubstantiveEndings[0], listStorage.feminineSubstantiveEndings[1],
@@ -343,10 +390,20 @@ public class FXMLGrammar implements Initializable {
 
         generalItem3.setOnAction((ActionEvent event) -> {
             System.out.println("GeneralItem3 has fired");
-            if (selectedItem == 16) { //possessive pronouns
+            if (selectedItem == 1) {
+                extraInfoText.setText("Currently showing short adjectives (" + listStorage.normalAdjectivesSoftDescription + ")");
+                tableView.setVisible(visibility);
+                tableViewData = rtd.getGrammarData(listStorage.shortAdjectivesTitles,
+                        listStorage.shortAdjectives, listStorage.shortAdjectives,
+                        listStorage.shortAdjectives, listStorage.shortAdjectives);
+                tableView.setItems(tableViewData);
+                setColumnText("Terms", listStorage.gendersAndMultiple[0], listStorage.gendersAndMultiple[1],
+                        listStorage.gendersAndMultiple[2], listStorage.gendersAndMultiple[3], null, null, null, null);
+                tableView.getColumns().setAll(column1, column2, column3, column4, column5);
+            } else if (selectedItem == 16) { //possessive pronouns
                 tableView.setVisible(visibility);
                 extraInfoText.setText("Currently showing second person in singular");
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.possessivePronounsSecondPersonSingular, listStorage.possessivePronounsSecondPersonSingular,
                         listStorage.possessivePronounsSecondPersonSingular, listStorage.possessivePronounsSecondPersonSingular);
                 tableView.setItems(tableViewData);
@@ -354,7 +411,7 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 19) { //Substantives/nouns
                 extraInfoText.setText("Currently showing masculine substantives in singular");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.substantivesMasculineSingular, listStorage.substantivesMasculineSingular,
                         listStorage.substantivesMasculineSingular, listStorage.substantivesMasculineSingular);
                 setColumnText(listStorage.masculineSubstantiveEndings[0], listStorage.masculineSubstantiveEndings[1],
@@ -370,7 +427,7 @@ public class FXMLGrammar implements Initializable {
             if (selectedItem == 16) { //possessive pronouns
                 tableView.setVisible(visibility);
                 extraInfoText.setText("Currently showing second person in plural");
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.possessivePronounsSecondPersonPlural, listStorage.possessivePronounsSecondPersonPlural,
                         listStorage.possessivePronounsSecondPersonPlural, listStorage.possessivePronounsSecondPersonPlural);
                 tableView.setItems(tableViewData);
@@ -378,7 +435,7 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 19) { //Substantives/nouns
                 extraInfoText.setText("Currently showing masculine substantives in singular");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort,
                         listStorage.substantivesMasculinePlural, listStorage.substantivesMasculinePlural,
                         listStorage.substantivesMasculinePlural, listStorage.substantivesMasculinePlural);
                 setColumnText(listStorage.masculineSubstantiveEndings[0], listStorage.masculineSubstantiveEndings[1],
@@ -397,7 +454,7 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 19) { //Substantives/nouns
                 extraInfoText.setText("Currently showing neuter substantives in singular");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort, listStorage.substantivesNeutralSingular,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort, listStorage.substantivesNeutralSingular,
                         listStorage.substantivesNeutralSingular, listStorage.substantivesNeutralSingular,
                         listStorage.substantivesNeutralSingular);
                 setColumnText(listStorage.neutralSubstantiveEndings[0], listStorage.neutralSubstantiveEndings[1],
@@ -416,7 +473,7 @@ public class FXMLGrammar implements Initializable {
             } else if (selectedItem == 19) { //Substantives/nouns
                 extraInfoText.setText("Currently showing neuter substantives in singular");
                 tableView.setVisible(visibility);
-                tableViewData = rtd.getData(listStorage.grammarTermsForTableviewShort, listStorage.substantivesNeutralPlural,
+                tableViewData = rtd.getGrammarData(listStorage.grammarTermsForTableviewShort, listStorage.substantivesNeutralPlural,
                         listStorage.substantivesNeutralPlural, listStorage.substantivesNeutralPlural,
                         listStorage.substantivesNeutralPlural);
                 setColumnText(listStorage.neutralSubstantiveEndings[0], listStorage.neutralSubstantiveEndings[1],

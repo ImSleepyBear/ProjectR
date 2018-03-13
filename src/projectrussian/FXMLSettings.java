@@ -18,6 +18,9 @@ public class FXMLSettings implements Initializable {
     private final ListStorage listStorage = new ListStorage();
     private final ChangeScene cs = new ChangeScene();
     
+    public int currentLanguageGrammar;
+    public int currentLanguageProgram;
+    
     @FXML
     private MenuButton languageGrammar;
     @FXML

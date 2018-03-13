@@ -9,7 +9,7 @@ public class ListStorage {
     
     // lists used in the main view
     public String[] mainMenuListview = {
-        "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Language and Country Info (Coming Soon)", "Settings (Coming Soon)"
+        "Russian alphabet", "Grammar (Work In Progress)", "Practice (Coming Soon)", "General Language and Country Info (Work In Progress)", "Settings (Coming Soon)"
     };
 
     public String[] sceneDestinations = {
@@ -52,8 +52,8 @@ public class ListStorage {
         "Determinative Pronouns", "Emphatic Pronouns", "Gender", "Genitive Case", "Imperative", 
         "Instrumentalis Case", "Interrogative Pronouns", "Locative Case", "Nominative Case", "Numerals", 
         "Personal Pronouns", "Possessive Pronouns", "Preteritum", "Reflexive Pronouns",
-        "Substantives/Nouns", "Verbs", "Verb Aspects", "Verbs in Past Tense", "Verbs in Past Futurum",
-        
+        "Substantives/Nouns", "Verb Aspects", "Verbs in Present Tense", "Verbs in Past Tense", 
+        "Verbs of Motion", "Reflexive Verbs"
     };
 
     public String[] generalInfoListview = {
@@ -294,6 +294,65 @@ public class ListStorage {
         {"Кто", "Кого", "Кого", "Кому", "Кем", "Ком"}
     };
     
+    public String[] englishAdjectives = {
+        "Hard", "Soft", "Short"
+    };
+    
+    public String normalAdjectivesHardDescription = "'-ый', '-ой', '-ий' (but not '-ний')";
+    
+    public String[][] normalAdjectivesHard = {
+        {"-ЫЙ", "-ЫЙ, -ОГО (anim.)", "-ОГО", "-ОМУ", "-ЫМ", "-ОМ"},
+        {"-АЯ", "-УЮ", "-ОЙ", "-ОЙ", "-ОЙ", "-ОЙ"},
+        {"-ОЕ", "-ОЕ", "-ОГО", "-ОМУ", "-ЫМ", "-ОМ"},
+        {"-ЫЕ", "-ЫЕ, -ЫХ (anim.)", "-ЫХ", "-ЫМ", "-ЫМИ", "-ЫХ"}
+    };
+    
+    public String normalAdjectivesSoftDescription = "'-ний'";
+    
+    public String[][] normalAdjectivesSoft = {
+        {"-ИЙ", "-ИЙ, -ЕГО (anim.)", "-ЕГО", "-ЕМУ", "-ИМ", "-ЕМ"},
+        {"-ЯЯ", "-ЫЫ", "-ЕЙ", "-ЕЙ", "-ЕЙ (or ЕЮ)", "-ЕЙ"},
+        {"-ЕЕ", "-ЕЕ", "-ЕГО", "-ЕМУ", "-ИМ", "-ЕМ"},
+        {"-ИЕ", "-ИЕ, -ИХ (anim.)", "-ИХ", "-ИМ", "-ИМИ", "-ИХ"}
+    };
+    
+    public String[] shortAdjectivesTitles = {
+        "Short Adjectives"
+    };
+    
+    public String[][] shortAdjectives = {
+        {"-"}, 
+        {"-а"}, 
+        {"-о"}, 
+        {"-ы or и"}
+    };
+    
+    public String[] verbConjugations = {
+        "Pronoun", "1st conjugation", "2nd Conjugation", "Irregular verbs"
+    };
+    
+    public String[][] presentTenseVerbConjugations = {
+        {"I", "You", "He, She, It", "We", "You", "They"},
+        {"-Ю", "-ЕШЬ", "-ЕТ", "-ЕМ", "-ЕТЕ", "-ЮТ"},
+        {"-Ю/У", "-ИШЬ", "-ИТ", "-ИМ", "-ИТЕ", "-ЯТ"},
+        {"-", "-", "-", "-", "-", "-"} // check the irregular verbs for accurate endings
+    };
+    
+    public String[][] numerals = {
+        {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", 
+            "22", "23", "30", "40", "50", "60", "70", "80", "90", "100", "101", "200", "300", "400", "500", "600", "1 000", "1 000 000"},
+        {"ОДИН ОДНА ОДНО", "ДВА ДВЕ", "ТРИ", "ЧЕТЫРЕ", "ПЯТЬ", "ШЕСТЬ", "СЕМЬ", "ВОСЕМЬ", "ДЕВЯТЬ", "ДЕСЯТЬ", "ОДИННАДЦАТЬ", 
+            "ДВЕНАДЦАТЬ", "ТРМНАДЦАТЬ", "ЧЕТЫРНАДЦАТЬ", "ПЯТНАДЦАТЬ", "ШЕСТНАДЦАТЬ", "СЕМНАДЦАТЬ", "ВОСЕМНАДЦАТЬ", 
+            "ДЕВЯТЬНАДЦАТЬ", "ДВАДЦАЬБ", "ДВАДЦАТЬ ОДИН ОДНА ОДНО", "ДВАДЦАТЬ ДВА ДВЕ", "ДВАДЦАТЬ ТРМ", "ТРИДЦАТЬ", "СОВОК", 
+            "ПЯТЬДЕСЯТ", "ШЕСТЬДЕСЯТ", "СЕМДЕСЯТ", "ВОСЕМЬДЕСЯТ", "ДЕВЯНОСТО", "СТО", "СТО ОДИН ОДНА ОДНО", "ДВЕСТИ", "ТРИСТА", 
+            "ЧЕТЫРЕСТА", "ПЯТЬСОТ", "ШЕСТЬСОТ", "ТЫСЯЧА", "МИЛЛИОН"},
+        {"ПЕРВЫЙ", "ВТОРОЙ", "ТРЕТИЙ", "ЧЕТВЁРТЫЙ", "ПЯТЫЙ", "ШЕСТОЙ", "СЕДЬМОЙ", "ВОСЬМОЙ", "ДЕВЯТЫЙ", "ДЕСЯТЫЙ", "ОДИННАДЦАТЫЙ", 
+            "ДВЕНАДЦАТЫЙ", "ТРИНАДЦАТЫЙ", "ЧЕТЫРНАДЦАТЫЙ", "ПЯТНАДЦАТЫЙ", "ШЕСТНАДЦАТЫЙ", "СЕМНАДЦАТЫЙ", "ВОСЕМНАДЦАТЫЙ", 
+            "ДЕВЯТЬНАДЦАТЫЙ", "ДВАДЦАТЫЙ", "ДВАДЦАТЬ ПЕРВЫЙ", "ДВАДЦАТЬ ВТОРОЙ", "ДВАДЦАТБ ТРЕТИЙ", "ТРИДЦАЫЙ", "СОРОКОВОЙ", 
+            "ПЯТМДЕСЯТЫЙ", "ШЕСТИДЕСЯТЫЙ", "СЕМИДЕСЯТЫЙ", "ВОСЬМИДЕСЯТЫЙ", "ДЕВЯНОСТЫЙ", "СОТЫЙ", "СТО ПЕРВВЙ", "ДВУХСОТЫЙ", 
+            "ТРЁХСОТЫЙ", "ЧЕТЫРЁХСОТЫЙ", "ПЯТИСОТЫЙ", "ШЕСТИСОЬЫЙ", "ТЫСЯЧНЫЙ", "МИЛЛИОННЫЙ"},
+    };
+    
     //lists that deals with possible audio, and image files
     public String[] audioFileNames = { // should contain the names of the audio files that comes with the application
     };
@@ -301,4 +360,5 @@ public class ListStorage {
     public String[] imageFileNames = { // should contain the names of the image files available for the application
     };
 
+    public String[] languages = {};
 }
